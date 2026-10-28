@@ -158,10 +158,14 @@ def test_f2p_and_contract_extraction() -> None:
     ]
     assert notes == []
     contract = newtask.interface_contract(gold, tests)
-    assert contract == [
-        "class DiscountPolicy(val max: Int)",
-        "fun clamp(pct: Int): Int = pct.coerceIn(0, max)",
-    ]
+    # `apply` existed before (it appears in a removed line): a modification, not a new symbol.
+    # Signatures only: the contract must never carry the body of the fix.
+    assert contract == ["class DiscountPolicy(val max: Int)", "fun clamp(pct: Int): Int"]
+    assert newtask.signature_of("fun f(a: Int = 1): Int = a + 1") == "fun f(a: Int = 1): Int"
+    assert newtask.signature_of("public static boolean ok(String s) { return true; }") == (
+        "public static boolean ok(String s)"
+    )
+    assert newtask.signature_of("class A : Base()") == "class A : Base()"
 
 
 def test_java_declarations() -> None:

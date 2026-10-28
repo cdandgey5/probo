@@ -22,7 +22,7 @@ Live run against `https://github.com/commons-app/apps-android-commons/pull/6529`
   the image placeholder;
 - `probo validate-task`: ok, one warning (image not pinned by digest).
 
-Unit tests: 115 passed (canned pull request, Kotlin and Java declaration
+Unit tests:  (canned pull request, Kotlin and Java declaration
 extraction, rejection of build-file changes and missing issues).
 
 ## 2026-10-28 (later): P3-C, MobileDev-Bench import adapter

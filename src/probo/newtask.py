@@ -168,10 +168,15 @@ def class_fqn_of(path: str) -> str | None:
     return ".".join([*rest[:-1], stem])
 
 
-def declared_symbols(chunk: str, path: str) -> list[tuple[str, str]]:
-    """``(name, declaration line)`` for declarations the chunk adds."""
+def removed_lines(chunk: str) -> list[str]:
+    return [
+        ln[1:].rstrip("\r\n") for ln in chunk.splitlines() if ln.startswith("-") and not ln.startswith("---")
+    ]
+
+
+def _declarations(lines: list[str], path: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
-    for line in added_lines(chunk):
+    for line in lines:
         if path.endswith(".kt"):
             m = _KT_DECL_RE.match(line)
             if m:
@@ -187,14 +192,42 @@ def declared_symbols(chunk: str, path: str) -> list[tuple[str, str]]:
     return out
 
 
+def declared_symbols(chunk: str, path: str, new_only: bool = False) -> list[tuple[str, str]]:
+    """``(name, declaration line)`` for declarations the chunk adds. With
+    ``new_only`` a declaration whose name also appears in a removed line is a
+    modification of an existing symbol and is left out."""
+    added = _declarations(added_lines(chunk), path)
+    if not new_only:
+        return added
+    existing = {name for name, _d in _declarations(removed_lines(chunk), path)}
+    return [(n, d) for n, d in added if n not in existing]
+
+
+def signature_of(declaration: str) -> str:
+    """Trim a declaration to its signature so the contract never carries the
+    body of the fix: cut at the first ``=`` or ``{`` outside brackets."""
+    depth = 0
+    for i, ch in enumerate(declaration):
+        if ch in "([<":
+            depth += 1
+        elif ch in ")]>":
+            depth -= 1
+        elif depth == 0 and ch in "={":
+            return declaration[:i].rstrip()
+    return declaration.rstrip()
+
+
 def interface_contract(gold_chunks: list[tuple[str, str]], test_chunks: list[tuple[str, str]]) -> list[str]:
-    """Declarations the gold patch adds whose names the test patch references."""
+    """Signatures of declarations the gold patch introduces (not ones it only
+    modifies) whose names the test patch references."""
     test_text = "\n".join(line for _p, c in test_chunks for line in added_lines(c))
     contract: list[str] = []
     for path, chunk in gold_chunks:
-        for name, decl in declared_symbols(chunk, path):
-            if re.search(r"(?<![\w$])" + re.escape(name) + r"(?![\w$])", test_text) and decl not in contract:
-                contract.append(decl.rstrip("{ ").rstrip())
+        for name, decl in declared_symbols(chunk, path, new_only=True):
+            if re.search(r"(?<![\w$])" + re.escape(name) + r"(?![\w$])", test_text):
+                sig = signature_of(decl)
+                if sig not in contract:
+                    contract.append(sig)
     return contract
 
 
@@ -347,7 +380,7 @@ def draft_task(
         else:
             problems.append(f"the fix touches a {cat} file ({path}); v0.1 tasks must not")
     gold_text = "".join(c for _p, c in gold_chunks)
-    if grader.find_dependency_additions(gold_text):
+    if grader.find_dependency_additions(diff_text):
         problems.append("the fix adds a dependency; v0.1 tasks must not")
     if not gold_chunks:
         problems.append("no main-source change in the pull request")
