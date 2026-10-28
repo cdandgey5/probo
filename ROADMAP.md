@@ -280,13 +280,13 @@ The phases above describe what to build. This section turns them into work a fre
 | P1-D | P1-C | Manifest flattening; thin CLI for run, report, validate-task, regrade-infra | A Harbor job produces the JSONL manifest and a rendered report | **Done against a saved sample trial layout** validated by Harbor's TrialResult model. Open: the same against a real Harbor job (needs P0-C) |
 | P2-A | P1-D, keys | Adapter configuration and pinning; saboteur agent; cost capture including the Aider estimate; conditions table | One agent, one task, three attempts; saboteur flagged every time | Blocked on H2 and H3; the conditions table renderer exists |
 | P2-B | P2-A, H5 | Pilot: one agent, five tasks, one attempt; statistics module with clustered SE and minimum detectable difference; compare command | Pilot report with cost per run and MDD; G4 recorded | Statistics module and `probo compare` **done** with a hand-computed fixture; the pilot is blocked on H2, H3, H5 |
-| P3-A | P1-D | new-task from a PR URL with interface-contract extraction; docs/TASK_AUTHORING.md | A real PR becomes a task that passes the gate | Open; docs/TASK_SCHEMA.md is the seed of the authoring guide |
+| P3-A | P1-D | new-task from a PR URL with interface-contract extraction; docs/TASK_AUTHORING.md | A real PR becomes a task that passes the gate | **Draft half done**: `probo new-task` verified live on a commons-app pull request; docs/TASK_AUTHORING.md written. The gate half needs the per-repo image (H2) |
 | P3-B | P3-A | Mining sprints: screen candidates, gate, task cards; repeat | 15 fresh tasks pass the gate, or the candidate pool is exhausted and the count is recorded | Open |
 | P3-C | G2 yes | MobileDev-Bench import adapter; its Android-native subset through the gate | Imported tasks pass the gate; failures logged in the pack changelog | **Adapter done** (`probo import-mdb`: 230 of 328 Android rows pass the v0.1 rules, 77 from Apache-2.0 or MIT sources, all 230 validate). The gate on the imported tasks needs H2; images are 3.8 to 4.8 GiB compressed each, so plan disk per repository (docs/mobiledev-bench-images.md) |
 | P4-A | P3, H5 | Full benchmark run on the chosen hardware | Raw JSONL for every run; conditions table complete | Open |
 | P4-B | P4-A | README with table, MDD, GIF; write-up; v0.1.0 on PyPI; CONTRIBUTING; issue templates | Release tagged; install and single-task run work from a clean machine | CONTRIBUTING.md and a status README exist; the rest is open |
 
-Expect 15 to 25 sessions for the fourteen packages. P0-B and P3-C's adapter are done; P3-A (new-task from a PR URL) is the next package that needs no Docker; everything else from P0-C onward waits on H2.
+Expect 15 to 25 sessions for the fourteen packages. P0-B, P3-C's adapter and P3-A's draft command are done; the reference agents (P2-A code) and experiment mode (Phase 5) can still be built without Docker; everything else from P0-C onward waits on H2.
 
 ### Rules for every session (go into CLAUDE.md)
 

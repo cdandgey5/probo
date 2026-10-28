@@ -3,6 +3,28 @@
 One entry per roadmap package, with the package's done check and its output,
 dated. Newest first. The package table in ROADMAP.md carries the summary.
 
+## 2026-10-28 (later): P3-A, new-task from a pull request
+
+Done check: a real PR becomes a task that passes the gate. The draft half is
+done and verified live; the gate half needs the per-repo image (H2).
+
+Live run against `https://github.com/commons-app/apps-android-commons/pull/6529`
+(an Apache-2.0 repository that is also a MobileDev-Bench source):
+
+- base commit `3a55583` (first parent of the merge commit), merge date
+  2025-10-19, issue #2819 as the instruction, license Apache-2.0;
+- toolchain read at the base commit: Gradle 8.13, AGP 8.13.0, JDK 17;
+- `:app:testDebugUnitTest` with the filter `fr.free.nrw.commons.OkHttpJsonApiClientTests`,
+  two Fail-to-Pass candidates, a four-line interface contract;
+- notes: the module has product flavors (MobileDev-Bench runs the same tests
+  as `:app:testBetaDebugUnitTest`, so the variant note is right), two JSON
+  test resources that are not test classes, `p2p` to be filled by the gate,
+  the image placeholder;
+- `probo validate-task`: ok, one warning (image not pinned by digest).
+
+Unit tests: 115 passed (canned pull request, Kotlin and Java declaration
+extraction, rejection of build-file changes and missing issues).
+
 ## 2026-10-28 (later): P3-C, MobileDev-Bench import adapter
 
 Done check: imported tasks pass the gate; failures logged in the pack

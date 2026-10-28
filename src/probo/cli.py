@@ -336,6 +336,24 @@ def cmd_import_mdb(args: argparse.Namespace) -> int:
 
 
 # ---------------------------------------------------------------------------
+# new-task
+# ---------------------------------------------------------------------------
+
+
+def cmd_new_task(args: argparse.Namespace) -> int:
+    from probo.newtask import draft_task
+
+    draft = draft_task(args.pr_url, args.out, pack_version=args.pack_version, force=args.force)
+    print(f"draft: {draft.task_dir}")
+    for p in draft.problems:
+        print(f"  blocking: {p}")
+    for n in draft.notes:
+        print(f"  note: {n}")
+    print("read NOTES.md, then: probo validate-task " + str(draft.task_dir))
+    return 0 if draft.ok else 1
+
+
+# ---------------------------------------------------------------------------
 # parser
 # ---------------------------------------------------------------------------
 
@@ -428,6 +446,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--limit", type=int)
     s.add_argument("--manifest", help="also copy manifest.json to this path (for docs/data)")
     s.set_defaults(func=cmd_import_mdb)
+
+    s = sub.add_parser("new-task", help="draft a task from a merged GitHub pull request (needs gh)")
+    s.add_argument("pr_url")
+    s.add_argument("-o", "--out", default="tasks/drafts")
+    s.add_argument("--pack-version", default="0.0.0")
+    s.add_argument("--force", action="store_true", help="overwrite an existing draft")
+    s.set_defaults(func=cmd_new_task)
 
     for name, func, help_text in (
         ("grader-selftest", cmd_grader_selftest, "grade synthetic agent outcomes on the host JDK, no Docker"),

@@ -131,7 +131,9 @@ never zero.
   merged pull requests that touch JVM unit tests
   ([docs/seed-apps.md](docs/seed-apps.md)).
 
-Task format: [docs/TASK_SCHEMA.md](docs/TASK_SCHEMA.md).
+Task format: [docs/TASK_SCHEMA.md](docs/TASK_SCHEMA.md). Authoring, from a
+pull request to the gate: [docs/TASK_AUTHORING.md](docs/TASK_AUTHORING.md)
+(`probo new-task <pull request URL>` writes the draft).
 
 ## Limitations worth knowing
 

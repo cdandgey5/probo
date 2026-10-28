@@ -5,6 +5,19 @@ project is pre-release, so every entry sits under Unreleased until v0.1.0.
 
 ## Unreleased
 
+### Added (2026-10-28, package P3-A)
+
+- `probo new-task <pull request URL>`: drafts a task from a merged GitHub
+  pull request through `gh api`. Base commit from the merge commit's first
+  parent, instruction from the linked issue only, the diff split into
+  `gold.patch` (main sources) and `hidden.patch` (tests), Gradle test tasks
+  and class filters from the touched modules, Fail-to-Pass candidates from
+  the new `@Test` methods, an interface contract from the declarations the
+  fix adds that the tests reference, toolchain versions from the wrapper
+  and version catalog, and a NOTES.md of what still needs a human.
+- docs/TASK_AUTHORING.md: candidate selection, the draft, the hand finish,
+  the gate, and how imported tasks fit.
+
 ### Added (2026-10-28, package P3-C)
 
 - `probo import-mdb`: imports the Android-native subset of MobileDev-Bench
