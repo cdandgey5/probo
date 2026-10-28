@@ -21,8 +21,8 @@ jobs:
         id: probo
         with:
           tasks: "tasks/fixtures/*/"
-          results-a: examples/results-baseline.jsonl
-          results-b: examples/results-with-skill.jsonl
+          results-a: examples/baseline.jsonl
+          results-b: examples/with-skill.jsonl
           label-a: baseline
           label-b: with-skill
       - run: test -f "${{ steps.probo.outputs.compare-report }}"

@@ -135,7 +135,7 @@ the number of tasks it would have taken. Try the renderer without Docker on
 the synthetic sets in `examples/`:
 
 ```bash
-uv run probo compare examples/results-baseline.jsonl examples/results-with-skill.jsonl
+uv run probo compare examples/baseline.jsonl examples/with-skill.jsonl
 ```
 
 ## In your CI
