@@ -1,0 +1,13 @@
+diff --git a/src/main/kotlin/com/example/pricing/DiscountCalculator.kt b/src/main/kotlin/com/example/pricing/DiscountCalculator.kt
+index 58744d0..3099001 100644
+--- a/src/main/kotlin/com/example/pricing/DiscountCalculator.kt
++++ b/src/main/kotlin/com/example/pricing/DiscountCalculator.kt
+@@ -14,7 +14,7 @@ object DiscountCalculator {
+      */
+     fun applyDiscount(priceCents: Long, percent: Int): Long {
+         require(priceCents >= 0) { "priceCents must not be negative: $priceCents" }
+-        val clamped = percent.coerceIn(0, 99)
++        val clamped = percent.coerceIn(0, 100)
+         return priceCents - priceCents * clamped / 100
+     }
+ }

@@ -1,0 +1,5 @@
+com.example.pricing.DiscountCalculatorTest#halfDiscountHalvesPrice
+com.example.pricing.DiscountCalculatorTest#fullDiscountYieldsZero
+com.example.pricing.DiscountCalculatorTest#zeroDiscountKeepsPrice
+com.example.pricing.DiscountCalculatorTest#negativePercentIsClampedToZero
+com.example.pricing.DiscountCalculatorTest#negativePriceIsRejected

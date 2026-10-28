@@ -1,0 +1,38 @@
+schema_version = "0"
+id = "pricing-discount"
+kind = "bug_fix"
+difficulty = "trivial"
+language = "kotlin-jvm"
+pack_version = "0.0.0"
+
+[source]
+repo = "fixture"
+license = "Apache-2.0"
+base_commit = "fixture"
+attribution = "Harness fixture: a one-module pure-Kotlin Gradle project written for Probo, not mined from a real repository. It is the seed of the Phase 0 prototype (prototype/harbor-gradle-task)."
+
+[environment]
+repo_dir = "repo"
+base_image = "eclipse-temurin:17-jdk"
+jdk = "17"
+gradle = "8.14.3"
+cpus = 2
+memory_mb = 4096
+build_timeout_sec = 1800
+
+[verification]
+test_tasks = [":test"]
+hidden_tests = ["src/test/kotlin/com/example/pricing/DiscountCalculatorTest.kt"]
+f2p = ["com.example.pricing.DiscountCalculatorTest#fullDiscountYieldsZero"]
+p2p = [
+  "com.example.pricing.DiscountCalculatorTest#halfDiscountHalvesPrice",
+  "com.example.pricing.DiscountCalculatorTest#zeroDiscountKeepsPrice",
+  "com.example.pricing.DiscountCalculatorTest#negativePercentIsClampedToZero",
+  "com.example.pricing.DiscountCalculatorTest#negativePriceIsRejected",
+]
+agent_timeout_sec = 900
+verify_timeout_sec = 600
+test_command = "./gradlew test --offline"
+
+[gold]
+patch = "gold.patch"

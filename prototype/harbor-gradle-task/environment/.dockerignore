@@ -1,0 +1,4 @@
+repo/build/
+repo/.gradle/
+repo/.kotlin/
+repo/.git/

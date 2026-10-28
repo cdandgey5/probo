@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+
+# Build and run output
+build/
+harbor-jobs/
+results*.jsonl
+
+# Gradle output inside fixture repositories
+**/repo/build/
+**/repo/.gradle/
+**/repo/.kotlin/
+.gradle/
+.kotlin/
+
+# Script caches
+scripts/cache/
+
+# Editors and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

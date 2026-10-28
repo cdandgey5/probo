@@ -1,0 +1,45 @@
+schema_version = "1.4"
+
+# Files the grading container needs from the agent container. Harbor copies
+# them out after the agent phase and restores them at the same path inside the
+# separate verifier sandbox. The collect hook below fills this directory.
+artifacts = ["/tmp/harbor-capture"]
+
+[metadata]
+kind = "bug_fix"
+difficulty = "trivial"
+language = "kotlin-jvm"
+gradle = "8.14.3"
+jdk = "17"
+f2p = ["com.example.pricing.DiscountCalculatorTest#fullDiscountYieldsZero"]
+p2p = [
+  "com.example.pricing.DiscountCalculatorTest#halfDiscountHalvesPrice",
+  "com.example.pricing.DiscountCalculatorTest#zeroDiscountKeepsPrice",
+  "com.example.pricing.DiscountCalculatorTest#negativePercentIsClampedToZero",
+  "com.example.pricing.DiscountCalculatorTest#negativePriceIsRejected",
+]
+
+[agent]
+timeout_sec = 900.0
+
+[verifier]
+timeout_sec = 600.0
+# Grade in a fresh container built from the same image: the agent's filesystem,
+# environment variables and API key never reach the grader.
+environment_mode = "separate"
+
+# Runs inside the agent container after the agent finishes and before artifacts
+# are collected: the "capture" step. The grader applies this patch onto the
+# pristine tree, so only the diff crosses the boundary, not the working tree.
+[[verifier.collect]]
+command = "mkdir -p /tmp/harbor-capture && cd /app && git add -A && git diff --cached --binary HEAD > /tmp/harbor-capture/agent.patch && git diff --cached --name-status HEAD > /tmp/harbor-capture/changed-files.txt; git reset -q"
+timeout_sec = 60.0
+
+# Baseline network policy of the separate grading container: none.
+[verifier.environment]
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096

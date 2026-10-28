@@ -1,0 +1,71 @@
+[project]
+name = "probo"
+version = "0.1.0.dev0"
+description = "Puts AI coding agents' Gradle and Android changes to the proof: key-less, offline grading on Harbor, tamper detection, and pass rates with honest error bars."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "cdandgey5" }]
+keywords = ["evaluation", "benchmark", "coding-agents", "android", "gradle", "kotlin", "harbor", "swe-bench"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = [
+  "jsonschema>=4.23",
+  "tomli-w>=1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/cdandgey5/probo"
+Issues = "https://github.com/cdandgey5/probo/issues"
+
+[project.scripts]
+probo = "probo.cli:main"
+
+[project.optional-dependencies]
+# The runner. Pinned: the layer depends on Harbor's separate-verifier, collect-hook
+# and reward-file contracts; reread Harbor's changelog before bumping (docs/DESIGN.md).
+harbor = ["harbor==0.24.0"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.8",
+  "harbor==0.24.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/probo"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/probo", "README.md", "LICENSE"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# grade.py runs inside the verifier image on whatever python3 the base image
+# ships (3.10 on Ubuntu 22.04), so it must not use 3.12-only syntax.
+"src/probo/grader/grade.py" = ["UP"]
+"tests/*" = ["E501"]
+# Data-collection script written for one report; keep it runnable, not pretty.
+"scripts/*" = ["E501", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
