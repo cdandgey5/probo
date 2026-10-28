@@ -83,8 +83,6 @@ def build_task_toml(spec: TaskSpec) -> dict[str, Any]:
         "task_id": spec.id,
         "kind": spec.data["kind"],
         "language": spec.data["language"],
-        "jdk": env["jdk"],
-        "gradle": env["gradle"],
         "f2p": spec.f2p,
         "p2p": spec.p2p,
         "test_tasks": spec.test_tasks,
@@ -95,7 +93,7 @@ def build_task_toml(spec: TaskSpec) -> dict[str, Any]:
     for key in ("difficulty",):
         if key in spec.data:
             metadata[key] = spec.data[key]
-    for key in ("agp",):
+    for key in ("jdk", "gradle", "agp"):
         if env.get(key):
             metadata[key] = env[key]
     for key in ("issue_url", "pr_url", "merge_date"):
@@ -148,14 +146,16 @@ def build_spec_json(spec: TaskSpec) -> dict[str, Any]:
         "pack_version": spec.pack_version,
         "kind": spec.data["kind"],
         "language": spec.data["language"],
-        "jdk": env["jdk"],
-        "gradle": env["gradle"],
+        "jdk": env.get("jdk"),
+        "gradle": env.get("gradle"),
         "agp": env.get("agp"),
         "test_tasks": spec.test_tasks,
         "results_dirs": results_dirs,
         "f2p": spec.f2p,
         "p2p": spec.p2p,
         "hidden_tests": spec.hidden_tests,
+        "hidden_patch": "hidden.patch" if spec.hidden_patch_path is not None else None,
+        "test_filters": spec.test_filters,
         "extra_protected": list(spec.verification.get("extra_protected", [])),
         "gradle_timeout_sec": spec.gradle_timeout_sec,
         "agent_timeout_sec": spec.agent_timeout_sec,
@@ -169,12 +169,27 @@ def build_dockerfile(spec: TaskSpec) -> str:
     env = spec.environment
     results_dirs = build_spec_json(spec)["results_dirs"]
     probe_check = " && ".join(f"ls {d}/TEST-*.xml > /dev/null" for d in results_dirs)
+    test_args = " ".join(_shell_quote(a) for a in grader.gradle_task_args(spec.test_tasks, spec.test_filters))
+    if spec.image_with_repo:
+        return _template("Dockerfile.overlay").format(
+            task_id=spec.id,
+            image_with_repo=spec.image_with_repo,
+            repo_path=spec.image_repo_path,
+            test_tasks=test_args,
+            probe_check=probe_check,
+        )
     return _template("Dockerfile.inline").format(
         task_id=spec.id,
         base_image=env.get("base_image", "eclipse-temurin:17-jdk"),
-        test_tasks=" ".join(spec.test_tasks),
+        test_tasks=test_args,
         probe_check=probe_check,
     )
+
+
+def _shell_quote(arg: str) -> str:
+    if all(c.isalnum() or c in ":._-/" for c in arg):
+        return arg
+    return '"' + arg.replace('"', '\\"') + '"'
 
 
 def protected_files(repo: Path, extra_protected: list[str]) -> list[Path]:
@@ -216,6 +231,8 @@ def convert_task(spec: TaskSpec, out_root: str | Path, repo_for_originals: str |
         _write(env_dir / "Dockerfile", build_dockerfile(spec))
         _write(env_dir / ".dockerignore", "repo/build/\nrepo/.gradle/\nrepo/.kotlin/\nrepo/.git/\n")
         shutil.copytree(repo_src, env_dir / "repo", ignore=shutil.ignore_patterns(*_SKIP_DIRS))
+    elif spec.image_with_repo:
+        _write(env_dir / "Dockerfile", build_dockerfile(spec))
     else:
         _write(
             env_dir / "README.md",
@@ -235,6 +252,8 @@ def convert_task(spec: TaskSpec, out_root: str | Path, repo_for_originals: str |
         dst = tests / "hidden" / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(spec.hidden_dir / rel, dst)
+    if spec.hidden_patch_path is not None:
+        shutil.copyfile(spec.hidden_patch_path, tests / "hidden.patch")
     originals_from = (
         repo_src if repo_src is not None else (Path(repo_for_originals) if repo_for_originals else None)
     )

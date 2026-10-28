@@ -122,6 +122,7 @@ def run_grader(
     shared: bool = False,
     timeout_sec: float | None = None,
     extra_hidden: dict[str, str] | None = None,
+    skip_hidden: bool = False,
 ) -> dict[str, Any]:
     """Grade one situation and return the verdict (plus ``_seconds``)."""
     app = host.work / f"run-{name}"
@@ -162,6 +163,8 @@ def run_grader(
     )
     if timeout_sec is not None:
         env["GRADLE_TIMEOUT_SEC"] = str(timeout_sec)
+    if skip_hidden:
+        env["PROBO_SKIP_HIDDEN"] = "1"
     t0 = time.time()
     proc = subprocess.run(
         [sys.executable, str(tests_dir / "grade.py")],
@@ -440,12 +443,9 @@ def run_gate(
     results: list[GateRun] = []
     problems: list[str] = []
 
-    # State A grades the pristine tree with the hidden tests *not* applied:
-    # hand the grader a tests dir whose hidden/ holds the base versions.
-    base_hidden = {}
-    for rel in hidden:
-        p = pristine / rel
-        base_hidden[rel] = p.read_text("utf-8") if p.is_file() else ""
+    # State A grades the pristine tree with the hidden tests *not* applied
+    # (PROBO_SKIP_HIDDEN): neither hidden files nor the hidden patch.
+    del hidden
 
     def record(state: str, i: int, v: dict[str, Any]) -> GateRun:
         tests = v.get("tests") or {}
@@ -470,9 +470,7 @@ def run_gate(
     for i in range(1, runs + 1):
         # A: base tests. Use the agent's "no diff" situation but with the base
         # test files in place of the hidden ones (deleted files stay deleted).
-        a = record(
-            "A", i, run_grader(host, task_dir, pristine, empty, f"gate-A-{i}", extra_hidden=base_hidden)
-        )
+        a = record("A", i, run_grader(host, task_dir, pristine, empty, f"gate-A-{i}", skip_hidden=True))
         if any(s != "passed" for s in a.p2p.values()):
             problems.append(
                 f"state A run {i}: a P2P test does not pass at base: "

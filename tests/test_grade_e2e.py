@@ -315,3 +315,45 @@ def test_build_outputs_from_agent_are_removed(h: Harness) -> None:
     assert v.exit_reason == "resolved"
     assert "build/test-results/test/TEST-stale.xml" in v.files_by_category["other"]
     assert v.tests["n_reports"] == 1
+
+
+def test_hidden_patch_is_applied_and_skippable(h: Harness, tmp_path: Path) -> None:
+    """SWE-bench style: the hidden tests arrive as a patch, applied after the
+    protected files are restored. PROBO_SKIP_HIDDEN (validation state A)
+    leaves the base tests in place."""
+    # Replace the hidden/ directory with an equivalent hidden.patch.
+    rmtree(str(h.tests_dir / "hidden"))
+    patch = h.mutate_patch(lambda t: (t / TEST).write_text(HIDDEN_TEST, encoding="utf-8", newline="\n"))
+    (h.tests_dir / "hidden.patch").write_text(patch, encoding="utf-8", newline="\n")
+    v, app = h.grade(h.mutate_patch(_fix))
+    assert v.exit_reason == "resolved" and v.detail["hidden_patch_applied"] is True
+    assert (app / TEST).read_text() == HIDDEN_TEST
+
+    # Tampered tests are restored first, so the hidden patch still applies.
+    def tamper(t: Path) -> None:
+        _fix(t)
+        (t / TEST).write_text("class CalcTest {}\n")
+
+    v2, _ = h.grade(h.mutate_patch(tamper))
+    assert v2.exit_reason == "tampered" and v2.detail["hidden_patch_applied"] is True
+    # State A: nothing hidden is applied, so the F2P test is missing.
+    v3, _ = h.grade("", extra_env={"PROBO_SKIP_HIDDEN": "1"})
+    assert v3.detail["hidden_skipped"] is True
+    assert v3.tests["f2p"] == {f"{CLS}#fullDiscountYieldsZero": "missing"}
+    assert v3.exit_reason == "no_diff"
+
+
+def test_hidden_patch_that_does_not_apply_is_infra_error(h: Harness) -> None:
+    (h.tests_dir / "hidden.patch").write_text(
+        "diff --git a/nope b/nope\n--- a/nope\n+++ b/nope\n@@ -1 +1 @@\n-x\n+y\n", encoding="utf-8"
+    )
+    v, _ = h.grade(h.mutate_patch(_fix))
+    assert v.exit_reason == "infra_error" and v.detail["hidden_patch_failed"] is True
+
+
+def test_test_filters_are_passed_per_task(h: Harness) -> None:
+    h.spec["test_tasks"] = [":test", ":other"]
+    h.spec["test_filters"] = {":test": ["a.B", "a.C"], ":other": []}
+    v, _ = h.grade(h.mutate_patch(_fix))
+    assert v.gradle["task_args"] == [":test", "--tests", "a.B", "--tests", "a.C", ":other"]
+    assert v.exit_reason == "resolved"

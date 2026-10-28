@@ -3,6 +3,40 @@
 One entry per roadmap package, with the package's done check and its output,
 dated. Newest first. The package table in ROADMAP.md carries the summary.
 
+## 2026-10-28 (later): P3-C, MobileDev-Bench import adapter
+
+Done check: imported tasks pass the gate; failures logged in the pack
+changelog. The adapter and the schema work are done; the gate needs Docker
+(the images are linux/amd64, 3.8 to 4.8 GiB compressed each), so the
+Gradle-backed half of the check is open until H2.
+
+What ran:
+
+```
+probo import-mdb data/test.jsonl -o build/tasks/mobiledev-bench --pack-version 0.1.0
+Android rows: 328; importable: 230; public-pack licenses among importable: 77
+exclusion reasons: 73 fix_touches_build, 55 fix_adds_dependency,
+  51 test_patch_touches_main, 5 test_patch_touches_build, 4 fix_touches_dependency_baseline
+per repository (importable / excluded): WordPress-Android 71/13 (GPL-2.0),
+  thunderbird-android 65/35 (Apache-2.0), element-x-android 31/37 (AGPL-3.0),
+  StreetComplete 15/3, Tusky 11/1, AntennaPod 9/0, apps-android-commons 8/2
+  (Apache-2.0), openhab-android 8/0 (EPL-2.0), jerboa 4/0, Voice 3/1,
+  medTimer 2/6 (MIT), NeoStumbler 2/0 (MIT), Geto 1/0
+probo validate-task build/tasks/mobiledev-bench/*/   -> 230 ok, 0 invalid
+```
+
+Warnings worth acting on before any of these enter a pack: `environment.jdk`
+and `gradle` are unset on all 230 (the gate fills them from the checkout);
+38 gold patches also touch non-source files (changelog fragments, SVG assets,
+a lint config), allowed but listed; 4 StreetComplete instructions name a file
+the gold patch touches (the leak check), to be reread by hand.
+
+Unit tests: 108 passed. The emitted overlay Dockerfile for
+`tuskyapp--tusky-2713` starts `FROM ghcr.io/mobiledev-bench/mobiledevbench/tuskyapp_mb_tusky:pr-2713`,
+links `/home/Tusky` to `/app`, deletes `/home/fix.patch`, and runs
+`:app:testBlueDebugUnitTest --tests com.keylesspalace.tusky.FilterTest`
+offline in both probes. Not built: no Docker.
+
 ## 2026-10-28: naming, P0-B, and the Docker-independent parts of P1-B, P1-D, P2-B
 
 Session type: autonomous build from the roadmap (v2.2 to v2.3). Machine:

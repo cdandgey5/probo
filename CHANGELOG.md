@@ -5,6 +5,31 @@ project is pre-release, so every entry sits under Unreleased until v0.1.0.
 
 ## Unreleased
 
+### Added (2026-10-28, package P3-C)
+
+- `probo import-mdb`: imports the Android-native subset of MobileDev-Bench
+  from its `data/test.jsonl` into Probo tasks that reference the published
+  GHCR instance images. Of 328 Android rows, 230 pass the v0.1 rules (77 from
+  Apache-2.0 or MIT sources); every decision is recorded in
+  docs/data/mobiledev-bench-import.json. Tasks are generated at import time,
+  never checked in (upstream licenses).
+- Task schema: `verification.hidden_patch` (a test patch applied at grade
+  time, SWE-bench style), `verification.test_filters` (per-task `--tests`
+  patterns), `environment.image_with_repo` plus `image_repo_path` (overlay
+  on an image that already holds the repository); `jdk` and `gradle` are
+  optional until the gate fills them; test IDs may carry parameterized
+  display names.
+- Grader: applies `tests/hidden.patch` after restoring protected files,
+  binds `--tests` filters to their task, honours `PROBO_SKIP_HIDDEN` for
+  validation state A; `probo gate` uses it.
+- Converter: `Dockerfile.overlay` template for image-with-repo tasks. It
+  deletes the gold patch MobileDev-Bench bakes into `/home`, replaces the
+  upstream `.git` (whose history contains the fix) with a one-commit
+  repository at `/app`, reuses the image's warmed Gradle cache, and builds
+  the read-only cache layout.
+- docs/mobiledev-bench-images.md: how the upstream images are built and run,
+  from the harness source and the registry.
+
 ### Added (2026-10-28)
 
 - Project name: Probo (`probo`), free on PyPI; chosen by the author over the first proposal, SeaTrial.

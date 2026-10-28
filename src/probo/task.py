@@ -101,6 +101,23 @@ class TaskSpec:
         return list(self.verification.get("hidden_tests", []))
 
     @property
+    def hidden_patch_path(self) -> Path | None:
+        rel = self.verification.get("hidden_patch")
+        return (self.task_dir / rel) if rel else None
+
+    @property
+    def test_filters(self) -> dict[str, list[str]]:
+        return {k: list(v) for k, v in (self.verification.get("test_filters") or {}).items()}
+
+    @property
+    def image_with_repo(self) -> str | None:
+        return self.environment.get("image_with_repo")
+
+    @property
+    def image_repo_path(self) -> str:
+        return self.environment.get("image_repo_path", "/app")
+
+    @property
     def agent_timeout_sec(self) -> float:
         return float(self.verification.get("agent_timeout_sec", 1800))
 
@@ -120,7 +137,7 @@ class TaskSpec:
         explicit = self.verification.get("test_command")
         if explicit:
             return explicit
-        return "./gradlew --offline " + " ".join(self.test_tasks)
+        return "./gradlew --offline " + " ".join(grader.gradle_task_args(self.test_tasks, self.test_filters))
 
     @property
     def errors(self) -> list[Problem]:
@@ -200,11 +217,14 @@ def _validate_semantics(spec: TaskSpec) -> None:
     if spec.task_dir.name != spec.id:
         add(Problem("warning", f"task directory name {spec.task_dir.name!r} differs from id {spec.id!r}"))
 
-    # Environment: exactly one of docker_image / repo_dir.
+    # Environment: exactly one of docker_image / repo_dir / image_with_repo.
     has_image = bool(env.get("docker_image"))
     has_repo = bool(env.get("repo_dir"))
-    if has_image == has_repo:
-        add(Problem("error", "environment must set exactly one of docker_image or repo_dir"))
+    has_image_with_repo = bool(env.get("image_with_repo"))
+    if sum([has_image, has_repo, has_image_with_repo]) != 1:
+        add(Problem("error", "environment must set exactly one of docker_image, repo_dir or image_with_repo"))
+    if has_image_with_repo and not str(env.get("image_repo_path", "/app")).startswith("/"):
+        add(Problem("error", "environment.image_repo_path must be absolute"))
     if has_repo:
         repo = spec.repo_dir
         assert repo is not None
@@ -253,6 +273,26 @@ def _validate_semantics(spec: TaskSpec) -> None:
         extra = sorted(set(on_disk) - set(spec.hidden_tests))
         if extra:
             add(Problem("error", f"files under {HIDDEN_DIRNAME}/ not listed in hidden_tests: {extra}"))
+    hidden_patch = spec.hidden_patch_path
+    if hidden_patch is not None:
+        if not hidden_patch.is_file():
+            add(Problem("error", f"hidden_patch {hidden_patch.name} is missing"))
+        else:
+            hp_files = patch_files(hidden_patch.read_text("utf-8", errors="replace"))
+            if not hp_files:
+                add(Problem("error", f"hidden_patch {hidden_patch.name} has no 'diff --git' headers"))
+            for path in hp_files:
+                cat = grader.classify_path(path, ver.get("extra_protected", []))
+                if cat in ("main", "build", "ci"):
+                    add(Problem("error", f"hidden_patch touches a {cat} path: {path}"))
+    for task, patterns in spec.test_filters.items():
+        if task not in spec.test_tasks:
+            add(Problem("error", f"test_filters names {task}, which is not in test_tasks"))
+        if not patterns:
+            add(Problem("warning", f"test_filters for {task} is empty; the whole task runs"))
+    for key in ("jdk", "gradle"):
+        if not env.get(key):
+            add(Problem("warning", f"environment.{key} is not set; results will not record it"))
 
     # Gold patch.
     gold = spec.gold_patch_path
@@ -267,8 +307,10 @@ def _validate_semantics(spec: TaskSpec) -> None:
     extra_protected = ver.get("extra_protected", [])
     for path in files:
         cat = grader.classify_path(path, extra_protected)
-        if cat != "main":
+        if cat in grader.TAMPER_CATEGORIES:
             add(Problem("error", f"gold patch touches a {cat} path: {path}"))
+        elif cat == "other":
+            add(Problem("warning", f"gold patch touches a non-source path: {path}"))
     deps = grader.find_dependency_additions(text)
     if deps:
         add(Problem("error", f"gold patch adds a dependency in {deps}"))

@@ -119,12 +119,14 @@ never zero.
 ## Tasks and their licenses
 
 - `tasks/fixtures/`: harness fixtures, written for Probo.
-- Planned v0.1 volume source: the Android-native subset of
+- v0.1 volume source: the Android-native subset of
   [MobileDev-Bench](https://github.com/MobileDev-Bench/mobiledev-bench) (MIT
-  harness, CC-BY-4.0 dataset, public images). Its patches are code from the
-  upstream apps and keep those apps' licenses; Probo stores them as data
-  with notices. Details and counts in
-  [docs/mobiledev-bench.md](docs/mobiledev-bench.md).
+  harness, CC-BY-4.0 dataset, public images). `probo import-mdb` turns its
+  `data/test.jsonl` into tasks at import time; 230 of the 328 Android rows
+  pass the v0.1 rules. The patches are code from the upstream apps and keep
+  those apps' licenses, so they are generated locally, never checked in.
+  Details in [tasks/mobiledev-bench/README.md](tasks/mobiledev-bench/README.md)
+  and [docs/mobiledev-bench.md](docs/mobiledev-bench.md).
 - Planned fresh subset: mined from Apache-2.0 or MIT Android apps ranked by
   merged pull requests that touch JVM unit tests
   ([docs/seed-apps.md](docs/seed-apps.md)).
@@ -133,6 +135,10 @@ Task format: [docs/TASK_SCHEMA.md](docs/TASK_SCHEMA.md).
 
 ## Limitations worth knowing
 
+- Windows works as a host: Harbor's CLI and the grader self-test run from
+  PowerShell or Git Bash. Docker Desktop on Windows Home needs the WSL2
+  feature (`wsl --install --no-distribution` is enough; no Linux shell or
+  distro is required). Keep the Harbor jobs directory outside OneDrive.
 - Agent-written code runs in the container that holds the agent's API key.
   Use a dedicated low-limit key per benchmark run and rotate it. Grading is
   key-less and offline, so the key never reaches the verifier.

@@ -354,3 +354,11 @@ def test_remove_build_outputs_only_next_to_gradle_scripts(tmp_path: Path) -> Non
     assert not (tmp_path / "build").exists()
     assert not (tmp_path / ".gradle").exists()
     assert (src_build / "Keep.kt").exists()
+
+
+def test_gradle_task_args_binds_filters_to_their_task() -> None:
+    args = g.gradle_task_args(
+        [":app:testDebugUnitTest", ":lib:test"], {":app:testDebugUnitTest": ["a.B", "a.C"]}
+    )
+    assert args == [":app:testDebugUnitTest", "--tests", "a.B", "--tests", "a.C", ":lib:test"]
+    assert g.gradle_task_args([":test"], {}) == [":test"]

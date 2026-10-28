@@ -77,7 +77,7 @@ def test_validation_errors(tmp_path: Path) -> None:
     assert "missing under hidden/" in messages
     assert "listed in both f2p and p2p" in messages
     assert "CRLF" in messages
-    assert "exactly one of docker_image or repo_dir" in messages
+    assert "exactly one of docker_image, repo_dir or image_with_repo" in messages
 
 
 def test_schema_errors_are_reported_not_raised(tmp_path: Path) -> None:

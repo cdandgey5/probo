@@ -1,0 +1,5701 @@
+{
+  "dataset": "MobileDev-Bench/mobiledev-bench",
+  "decisions": [
+    {
+      "fix_patch_lines": 317,
+      "importable": false,
+      "instance_id": "commons-app__apps-android-commons-6324",
+      "license": "Apache-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": null,
+      "task_id": "commons-app--apps-android-commons-6324",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 135,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2588",
+      "license": "AGPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2588",
+      "task_id": "element-hq--element-x-android-2588",
+      "test_tasks": [
+        ":features:ftue:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2610,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2594",
+      "license": "AGPL-3.0",
+      "n_f2p": 99,
+      "n_p2p": 1,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2594",
+      "test_tasks": [
+        ":features:preferences:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":features:verifysession:impl:testDebugUnitTest",
+        ":features:ftue:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 165,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2653",
+      "license": "AGPL-3.0",
+      "n_f2p": 51,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2653",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2437,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3298",
+      "license": "AGPL-3.0",
+      "n_f2p": 67,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3298",
+      "test_tasks": [
+        ":features:securebackup:impl:testDebugUnitTest",
+        ":features:login:impl:testDebugUnitTest",
+        ":features:verifysession:impl:testDebugUnitTest",
+        ":libraries:oidc:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 41,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3633",
+      "license": "AGPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3633",
+      "task_id": "element-hq--element-x-android-3633",
+      "test_tasks": [
+        ":features:login:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 480,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3918",
+      "license": "AGPL-3.0",
+      "n_f2p": 119,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3918",
+      "task_id": "element-hq--element-x-android-3918",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2632,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4161",
+      "license": "AGPL-3.0",
+      "n_f2p": 81,
+      "n_p2p": 6,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4161",
+      "test_tasks": [
+        ":libraries:mediaviewer:impl:testDebugUnitTest",
+        ":libraries:matrix:impl:testDebugUnitTest",
+        ":tests:konsist:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 7473,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4657",
+      "license": "GPL-3.0",
+      "n_f2p": 375,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4657",
+      "task_id": "streetcomplete--streetcomplete-4657",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 623,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5859",
+      "license": "Apache-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5859",
+      "task_id": "thunderbird--thunderbird-android-5859",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7008",
+      "license": "Apache-2.0",
+      "n_f2p": 72,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7008",
+      "task_id": "thunderbird--thunderbird-android-7008",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 490,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8136",
+      "license": "Apache-2.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8136",
+      "test_tasks": [
+        ":feature:navigation:drawer:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 897,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8155",
+      "license": "Apache-2.0",
+      "n_f2p": 21,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8155",
+      "test_tasks": [
+        ":feature:navigation:drawer:testDebugUnitTest",
+        ":feature:widget:unread:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 788,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8329",
+      "license": "Apache-2.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8329",
+      "test_tasks": [
+        ":feature:funding:googleplay:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 343,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9634",
+      "license": "Apache-2.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9634",
+      "test_tasks": [
+        ":core:logging:impl-composite:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 62,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-18967",
+      "license": "GPL-2.0",
+      "n_f2p": 24,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-18967",
+      "task_id": "wordpress-mobile--wordpress-android-18967",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 111,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19091",
+      "license": "GPL-2.0",
+      "n_f2p": 17,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19091",
+      "task_id": "wordpress-mobile--wordpress-android-19091",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 120,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19115",
+      "license": "GPL-2.0",
+      "n_f2p": 233,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19115",
+      "task_id": "wordpress-mobile--wordpress-android-19115",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 193,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19175",
+      "license": "GPL-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19175",
+      "task_id": "wordpress-mobile--wordpress-android-19175",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 92,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19253",
+      "license": "GPL-2.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19253",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 220,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19262",
+      "license": "GPL-2.0",
+      "n_f2p": 27,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19262",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 80,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19303",
+      "license": "GPL-2.0",
+      "n_f2p": 41,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19303",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 161,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19469",
+      "license": "GPL-2.0",
+      "n_f2p": 17,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19469",
+      "task_id": "wordpress-mobile--wordpress-android-19469",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 354,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19510",
+      "license": "GPL-2.0",
+      "n_f2p": 26,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19510",
+      "task_id": "wordpress-mobile--wordpress-android-19510",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 42,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19524",
+      "license": "GPL-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19524",
+      "task_id": "wordpress-mobile--wordpress-android-19524",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 182,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20074",
+      "license": "GPL-2.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20074",
+      "task_id": "wordpress-mobile--wordpress-android-20074",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1484,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-7954",
+      "license": "GPL-3.0",
+      "n_f2p": 28,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-7954",
+      "task_id": "antennapod--antennapod-7954",
+      "test_tasks": [
+        ":net:download:service:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 706,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-7815",
+      "license": "GPL-3.0",
+      "n_f2p": 52,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-7815",
+      "task_id": "antennapod--antennapod-7815",
+      "test_tasks": [
+        ":net:download:service:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 171,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-7581",
+      "license": "GPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-7581",
+      "task_id": "antennapod--antennapod-7581",
+      "test_tasks": [
+        ":app:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 350,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-7537",
+      "license": "GPL-3.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-7537",
+      "task_id": "antennapod--antennapod-7537",
+      "test_tasks": [
+        ":parser:transcript:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2708,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-7098",
+      "license": "GPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-7098",
+      "task_id": "antennapod--antennapod-7098",
+      "test_tasks": [
+        ":storage:database:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 151,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-6808",
+      "license": "GPL-3.0",
+      "n_f2p": 14,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-6808",
+      "task_id": "antennapod--antennapod-6808",
+      "test_tasks": [
+        ":core:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 239,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-6739",
+      "license": "GPL-3.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-6739",
+      "task_id": "antennapod--antennapod-6739",
+      "test_tasks": [
+        ":parser:feed:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 133,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-6659",
+      "license": "GPL-3.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-6659",
+      "task_id": "antennapod--antennapod-6659",
+      "test_tasks": [
+        ":core:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 251,
+      "importable": true,
+      "instance_id": "AntennaPod__AntennaPod-6573",
+      "license": "GPL-3.0",
+      "n_f2p": 14,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "AntennaPod/AntennaPod",
+      "task_dir": "build\\tasks\\mobiledev-bench\\antennapod--antennapod-6573",
+      "task_id": "antennapod--antennapod-6573",
+      "test_tasks": [
+        ":core:testFreeDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 34,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-6529",
+      "license": "Apache-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-6529",
+      "task_id": "commons-app--apps-android-commons-6529",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 67,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-6167",
+      "license": "Apache-2.0",
+      "n_f2p": 13,
+      "n_p2p": 6,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-6167",
+      "task_id": "commons-app--apps-android-commons-6167",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 158,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-6130",
+      "license": "Apache-2.0",
+      "n_f2p": 34,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-6130",
+      "task_id": "commons-app--apps-android-commons-6130",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 435,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-6070",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-6070",
+      "task_id": "commons-app--apps-android-commons-6070",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 400,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-6041",
+      "license": "Apache-2.0",
+      "n_f2p": 4,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-6041",
+      "task_id": "commons-app--apps-android-commons-6041",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 193,
+      "importable": false,
+      "instance_id": "commons-app__apps-android-commons-5947",
+      "license": "Apache-2.0",
+      "n_f2p": 156,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": null,
+      "task_id": "commons-app--apps-android-commons-5947",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1479,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-5875",
+      "license": "Apache-2.0",
+      "n_f2p": 185,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-5875",
+      "task_id": "commons-app--apps-android-commons-5875",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 63,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-5851",
+      "license": "Apache-2.0",
+      "n_f2p": 10,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-5851",
+      "task_id": "commons-app--apps-android-commons-5851",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 18872,
+      "importable": true,
+      "instance_id": "commons-app__apps-android-commons-5833",
+      "license": "Apache-2.0",
+      "n_f2p": 280,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "commons-app/apps-android-commons",
+      "task_dir": "build\\tasks\\mobiledev-bench\\commons-app--apps-android-commons-5833",
+      "task_id": "commons-app--apps-android-commons-5833",
+      "test_tasks": [
+        ":app:testBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 992,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-5622",
+      "license": "AGPL-3.0",
+      "n_f2p": 63,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-5622",
+      "test_tasks": [
+        ":libraries:mediaviewer:impl:testDebugUnitTest",
+        ":features:forward:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:roomdetails:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 23,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-5498",
+      "license": "AGPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 1,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-5498",
+      "task_id": "element-hq--element-x-android-5498",
+      "test_tasks": [
+        ":features:space:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1955,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-5320",
+      "license": "AGPL-3.0",
+      "n_f2p": 22,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-5320",
+      "test_tasks": [
+        ":libraries:matrix:impl:testDebugUnitTest",
+        ":features:space:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 192,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-5161",
+      "license": "AGPL-3.0",
+      "n_f2p": 21,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-5161",
+      "task_id": "element-hq--element-x-android-5161",
+      "test_tasks": [
+        ":features:preferences:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2392,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-5160",
+      "license": "AGPL-3.0",
+      "n_f2p": 3,
+      "n_p2p": 225,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "test_patch_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-5160",
+      "test_tasks": [
+        ":appnav:testDebugUnitTest",
+        ":features:login:impl:testDebugUnitTest",
+        ":features:home:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:preferences:impl:testDebugUnitTest",
+        ":features:roomdetails:impl:testDebugUnitTest",
+        ":libraries:matrix:impl:testDebugUnitTest",
+        ":libraries:featureflag:impl:testDebugUnitTest",
+        ":features:location:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 730,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4845",
+      "license": "AGPL-3.0",
+      "n_f2p": 15,
+      "n_p2p": 31,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4845",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest",
+        ":libraries:fullscreenintent:impl:testDebugUnitTest",
+        ":features:roomlist:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1599,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4752",
+      "license": "AGPL-3.0",
+      "n_f2p": 24,
+      "n_p2p": 22,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4752",
+      "test_tasks": [
+        ":features:login:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 110,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-4683",
+      "license": "AGPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 5,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-4683",
+      "task_id": "element-hq--element-x-android-4683",
+      "test_tasks": [
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":libraries:androidutils:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 86,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-4635",
+      "license": "AGPL-3.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-4635",
+      "task_id": "element-hq--element-x-android-4635",
+      "test_tasks": [
+        ":features:call:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 22,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4553",
+      "license": "AGPL-3.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4553",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 38,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4301",
+      "license": "AGPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 15,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4301",
+      "test_tasks": [
+        ":features:preferences:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-4209",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 32,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-4209",
+      "task_id": "element-hq--element-x-android-4209",
+      "test_tasks": [
+        ":libraries:eventformatter:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1719,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4205",
+      "license": "AGPL-3.0",
+      "n_f2p": 86,
+      "n_p2p": 6,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4205",
+      "test_tasks": [
+        ":libraries:mediaviewer:impl:testDebugUnitTest",
+        ":tests:konsist:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 181,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-4195",
+      "license": "AGPL-3.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-4195",
+      "task_id": "element-hq--element-x-android-4195",
+      "test_tasks": [
+        ":libraries:mediaviewer:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 224,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-4056",
+      "license": "AGPL-3.0",
+      "n_f2p": 71,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-4056",
+      "task_id": "element-hq--element-x-android-4056",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1865,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-4026",
+      "license": "AGPL-3.0",
+      "n_f2p": 144,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-4026",
+      "test_tasks": [
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":libraries:mediaviewer:impl:testDebugUnitTest",
+        ":libraries:dateformatter:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:poll:impl:testDebugUnitTest",
+        ":features:verifysession:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 147,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3953",
+      "license": "AGPL-3.0",
+      "n_f2p": 40,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3953",
+      "task_id": "element-hq--element-x-android-3953",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 152,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3916",
+      "license": "AGPL-3.0",
+      "n_f2p": 8,
+      "n_p2p": 9,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3916",
+      "task_id": "element-hq--element-x-android-3916",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 912,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3864",
+      "license": "AGPL-3.0",
+      "n_f2p": 22,
+      "n_p2p": 32,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3864",
+      "task_id": "element-hq--element-x-android-3864",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 265,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3829",
+      "license": "AGPL-3.0",
+      "n_f2p": 17,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3829",
+      "task_id": "element-hq--element-x-android-3829",
+      "test_tasks": [
+        ":features:verifysession:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 195,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3816",
+      "license": "AGPL-3.0",
+      "n_f2p": 59,
+      "n_p2p": 36,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3816",
+      "task_id": "element-hq--element-x-android-3816",
+      "test_tasks": [
+        ":libraries:eventformatter:impl:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 322,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3755",
+      "license": "AGPL-3.0",
+      "n_f2p": 23,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3755",
+      "test_tasks": [
+        ":libraries:pushproviders:firebase:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 780,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3694",
+      "license": "AGPL-3.0",
+      "n_f2p": 30,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3694",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1987,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3592",
+      "license": "AGPL-3.0",
+      "n_f2p": 190,
+      "n_p2p": 5,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3592",
+      "test_tasks": [
+        ":tests:konsist:testDebugUnitTest",
+        ":libraries:matrixui:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest",
+        ":features:preferences:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 721,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3429",
+      "license": "AGPL-3.0",
+      "n_f2p": 28,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3429",
+      "test_tasks": [
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":libraries:preferences:api:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 143,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3413",
+      "license": "AGPL-3.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3413",
+      "test_tasks": [
+        ":features:rageshake:impl:testDebugUnitTest",
+        ":features:migration:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 369,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3395",
+      "license": "AGPL-3.0",
+      "n_f2p": 19,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3395",
+      "task_id": "element-hq--element-x-android-3395",
+      "test_tasks": [
+        ":features:verifysession:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1559,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3381",
+      "license": "AGPL-3.0",
+      "n_f2p": 12,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3381",
+      "test_tasks": [
+        ":tests:konsist:testDebugUnitTest",
+        ":features:preferences:impl:testDebugUnitTest",
+        ":features:licenses:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 468,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3334",
+      "license": "AGPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3334",
+      "task_id": "element-hq--element-x-android-3334",
+      "test_tasks": [
+        ":features:call:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1194,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3322",
+      "license": "AGPL-3.0",
+      "n_f2p": 141,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3322",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest",
+        ":libraries:textcomposer:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 537,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3320",
+      "license": "AGPL-3.0",
+      "n_f2p": 30,
+      "n_p2p": 20,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3320",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 132,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3295",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3295",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 499,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-3127",
+      "license": "AGPL-3.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-3127",
+      "test_tasks": [
+        ":features:call:impl:testDebugUnitTest",
+        ":libraries:matrix:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 68,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-3057",
+      "license": "AGPL-3.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-3057",
+      "task_id": "element-hq--element-x-android-3057",
+      "test_tasks": [
+        ":libraries:dateformatter:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 71,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2901",
+      "license": "AGPL-3.0",
+      "n_f2p": 11,
+      "n_p2p": 6,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2901",
+      "task_id": "element-hq--element-x-android-2901",
+      "test_tasks": [
+        ":libraries:pushproviders:firebase:testDebugUnitTest",
+        ":libraries:pushproviders:unifiedpush:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 582,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2748",
+      "license": "AGPL-3.0",
+      "n_f2p": 22,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2748",
+      "test_tasks": [
+        ":features:ftue:impl:testDebugUnitTest",
+        ":features:verifysession:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 88,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2687",
+      "license": "AGPL-3.0",
+      "n_f2p": 2,
+      "n_p2p": 97,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2687",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest",
+        ":features:roomlist:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1804,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2639",
+      "license": "AGPL-3.0",
+      "n_f2p": 210,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2639",
+      "test_tasks": [
+        ":libraries:eventformatter:impl:testDebugUnitTest",
+        ":libraries:textcomposer:impl:testDebugUnitTest",
+        ":libraries:matrix:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":libraries:matrixui:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2243,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2620",
+      "license": "AGPL-3.0",
+      "n_f2p": 24,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2620",
+      "test_tasks": [
+        ":tests:testutils:testDebugUnitTest",
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":features:roomdirectory:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 219,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2609",
+      "license": "AGPL-3.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2609",
+      "test_tasks": [
+        ":features:poll:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 580,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2595",
+      "license": "AGPL-3.0",
+      "n_f2p": 30,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2595",
+      "task_id": "element-hq--element-x-android-2595",
+      "test_tasks": [
+        ":features:roomdetails:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 85,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2545",
+      "license": "AGPL-3.0",
+      "n_f2p": 23,
+      "n_p2p": 9,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2545",
+      "task_id": "element-hq--element-x-android-2545",
+      "test_tasks": [
+        ":libraries:eventformatter:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 546,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2543",
+      "license": "AGPL-3.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2543",
+      "task_id": "element-hq--element-x-android-2543",
+      "test_tasks": [
+        ":libraries:matrix:impl:testDebugUnitTest",
+        ":features:roomdetails:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1137,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2361",
+      "license": "AGPL-3.0",
+      "n_f2p": 13,
+      "n_p2p": 103,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2361",
+      "test_tasks": [
+        ":features:roomlist:impl:testDebugUnitTest",
+        ":features:ftue:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 402,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2342",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 103,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2342",
+      "task_id": "element-hq--element-x-android-2342",
+      "test_tasks": [
+        ":features:roomlist:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1856,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2283",
+      "license": "AGPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2283",
+      "test_tasks": [
+        ":features:viewfolder:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 141,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2225",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2225",
+      "task_id": "element-hq--element-x-android-2225",
+      "test_tasks": [
+        ":libraries:matrix:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 47,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2197",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 103,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2197",
+      "test_tasks": [
+        ":features:roomdetails:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 5155,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2166",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 102,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2166",
+      "test_tasks": [
+        ":features:createroom:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:preferences:impl:testDebugUnitTest",
+        ":features:roomdetails:impl:testDebugUnitTest",
+        ":features:rageshake:impl:testDebugUnitTest",
+        ":features:logout:impl:testDebugUnitTest",
+        ":features:securebackup:impl:testDebugUnitTest",
+        ":features:login:impl:testDebugUnitTest",
+        ":features:call:testDebugUnitTest",
+        ":libraries:architecture:testDebugUnitTest",
+        ":features:invitelist:impl:testDebugUnitTest",
+        ":libraries:mediaviewer:api:testDebugUnitTest",
+        ":features:lockscreen:impl:testDebugUnitTest",
+        ":features:verifysession:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 93,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-2040",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 99,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-2040",
+      "test_tasks": [
+        ":features:poll:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest",
+        ":features:preferences:impl:testDebugUnitTest",
+        ":appnav:testDebugUnitTest",
+        ":features:roomlist:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 14,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2035",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 100,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2035",
+      "task_id": "element-hq--element-x-android-2035",
+      "test_tasks": [
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 163,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2013",
+      "license": "AGPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 101,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2013",
+      "task_id": "element-hq--element-x-android-2013",
+      "test_tasks": [
+        ":features:logout:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 434,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-2001",
+      "license": "AGPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 21,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-2001",
+      "task_id": "element-hq--element-x-android-2001",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 58,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-1846",
+      "license": "AGPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 96,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-1846",
+      "task_id": "element-hq--element-x-android-1846",
+      "test_tasks": [
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 973,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-1799",
+      "license": "AGPL-3.0",
+      "n_f2p": 3,
+      "n_p2p": 103,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-1799",
+      "test_tasks": [
+        ":libraries:textcomposer:impl:testDebugUnitTest",
+        ":features:messages:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 79,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-1770",
+      "license": "AGPL-3.0",
+      "n_f2p": 24,
+      "n_p2p": 87,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-1770",
+      "task_id": "element-hq--element-x-android-1770",
+      "test_tasks": [
+        ":libraries:matrix:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 36,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-1767",
+      "license": "AGPL-3.0",
+      "n_f2p": 13,
+      "n_p2p": 18,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-1767",
+      "task_id": "element-hq--element-x-android-1767",
+      "test_tasks": [
+        ":libraries:eventformatter:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 143,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-1175",
+      "license": "AGPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-1175",
+      "test_tasks": [
+        ":libraries:designsystem:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 866,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-1127",
+      "license": "AGPL-3.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-1127",
+      "test_tasks": [
+        ":features:preferences:impl:testDebugUnitTest",
+        ":features:login:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 901,
+      "importable": false,
+      "instance_id": "element-hq__element-x-android-867",
+      "license": "AGPL-3.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "element-hq/element-x-android",
+      "task_dir": null,
+      "task_id": "element-hq--element-x-android-867",
+      "test_tasks": [
+        ":appnav:testDebugUnitTest",
+        ":services:appnavstate:impl:testDebugUnitTest",
+        ":tests:testutils:testDebugUnitTest",
+        ":libraries:push:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1153,
+      "importable": true,
+      "instance_id": "element-hq__element-x-android-781",
+      "license": "AGPL-3.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "element-hq/element-x-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\element-hq--element-x-android-781",
+      "task_id": "element-hq--element-x-android-781",
+      "test_tasks": [
+        ":features:login:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 469,
+      "importable": true,
+      "instance_id": "JackEblan__Geto-167",
+      "license": "GPL-3.0",
+      "n_f2p": 52,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "JackEblan/Geto",
+      "task_dir": "build\\tasks\\mobiledev-bench\\jackeblan--geto-167",
+      "task_id": "jackeblan--geto-167",
+      "test_tasks": [
+        ":feature:app-settings:testDebugUnitTest",
+        ":core:domain:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 27,
+      "importable": true,
+      "instance_id": "LemmyNet__jerboa-1632",
+      "license": "AGPL-3.0",
+      "n_f2p": 27,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "LemmyNet/jerboa",
+      "task_dir": "build\\tasks\\mobiledev-bench\\lemmynet--jerboa-1632",
+      "task_id": "lemmynet--jerboa-1632",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "LemmyNet__jerboa-1445",
+      "license": "AGPL-3.0",
+      "n_f2p": 13,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "LemmyNet/jerboa",
+      "task_dir": "build\\tasks\\mobiledev-bench\\lemmynet--jerboa-1445",
+      "task_id": "lemmynet--jerboa-1445",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 60,
+      "importable": true,
+      "instance_id": "LemmyNet__jerboa-1410",
+      "license": "AGPL-3.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "LemmyNet/jerboa",
+      "task_dir": "build\\tasks\\mobiledev-bench\\lemmynet--jerboa-1410",
+      "task_id": "lemmynet--jerboa-1410",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 20,
+      "importable": true,
+      "instance_id": "LemmyNet__jerboa-802",
+      "license": "AGPL-3.0",
+      "n_f2p": 12,
+      "n_p2p": 4,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "LemmyNet/jerboa",
+      "task_dir": "build\\tasks\\mobiledev-bench\\lemmynet--jerboa-802",
+      "task_id": "lemmynet--jerboa-802",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "Futsch1__medTimer-800",
+      "license": "MIT",
+      "n_f2p": 2,
+      "n_p2p": 4,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "Futsch1/medTimer",
+      "task_dir": "build\\tasks\\mobiledev-bench\\futsch1--medtimer-800",
+      "task_id": "futsch1--medtimer-800",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1310,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-584",
+      "license": "MIT",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-584",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1434,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-133",
+      "license": "MIT",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-133",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 179,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-125",
+      "license": "MIT",
+      "n_f2p": 1,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-125",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1157,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-108",
+      "license": "MIT",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-108",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 431,
+      "importable": true,
+      "instance_id": "Futsch1__medTimer-70",
+      "license": "MIT",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "Futsch1/medTimer",
+      "task_dir": "build\\tasks\\mobiledev-bench\\futsch1--medtimer-70",
+      "task_id": "futsch1--medtimer-70",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1204,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-54",
+      "license": "MIT",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-54",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 556,
+      "importable": false,
+      "instance_id": "Futsch1__medTimer-29",
+      "license": "MIT",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "Futsch1/medTimer",
+      "task_dir": null,
+      "task_id": "futsch1--medtimer-29",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 24,
+      "importable": true,
+      "instance_id": "mjaakko__NeoStumbler-338",
+      "license": "MIT",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "mjaakko/NeoStumbler",
+      "task_dir": "build\\tasks\\mobiledev-bench\\mjaakko--neostumbler-338",
+      "task_id": "mjaakko--neostumbler-338",
+      "test_tasks": [
+        ":app:testFullDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 34,
+      "importable": true,
+      "instance_id": "mjaakko__NeoStumbler-127",
+      "license": "MIT",
+      "n_f2p": 1,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "mjaakko/NeoStumbler",
+      "task_dir": "build\\tasks\\mobiledev-bench\\mjaakko--neostumbler-127",
+      "task_id": "mjaakko--neostumbler-127",
+      "test_tasks": [
+        ":app:testFullDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 31,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3836",
+      "license": "EPL-2.0",
+      "n_f2p": 15,
+      "n_p2p": 10,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3836",
+      "task_id": "openhab--openhab-android-3836",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 22,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3770",
+      "license": "EPL-2.0",
+      "n_f2p": 15,
+      "n_p2p": 10,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3770",
+      "task_id": "openhab--openhab-android-3770",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 17,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3346",
+      "license": "EPL-2.0",
+      "n_f2p": 14,
+      "n_p2p": 11,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3346",
+      "task_id": "openhab--openhab-android-3346",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 29,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3297",
+      "license": "EPL-2.0",
+      "n_f2p": 14,
+      "n_p2p": 11,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3297",
+      "task_id": "openhab--openhab-android-3297",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 310,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3123",
+      "license": "EPL-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3123",
+      "task_id": "openhab--openhab-android-3123",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 4491,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-3021",
+      "license": "EPL-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-3021",
+      "task_id": "openhab--openhab-android-3021",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 29,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-2959",
+      "license": "EPL-2.0",
+      "n_f2p": 13,
+      "n_p2p": 3,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-2959",
+      "task_id": "openhab--openhab-android-2959",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 799,
+      "importable": true,
+      "instance_id": "openhab__openhab-android-2925",
+      "license": "EPL-2.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "openhab/openhab-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\openhab--openhab-android-2925",
+      "task_id": "openhab--openhab-android-2925",
+      "test_tasks": [
+        ":mobile:testFossBetaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 144,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-6152",
+      "license": "GPL-3.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-6152",
+      "task_id": "streetcomplete--streetcomplete-6152",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 41,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-6075",
+      "license": "GPL-3.0",
+      "n_f2p": 15,
+      "n_p2p": 6,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-6075",
+      "task_id": "streetcomplete--streetcomplete-6075",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 71,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5976",
+      "license": "GPL-3.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5976",
+      "task_id": "streetcomplete--streetcomplete-5976",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 222,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5931",
+      "license": "GPL-3.0",
+      "n_f2p": 149,
+      "n_p2p": 95,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5931",
+      "task_id": "streetcomplete--streetcomplete-5931",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 31,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5818",
+      "license": "GPL-3.0",
+      "n_f2p": 52,
+      "n_p2p": 7,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5818",
+      "task_id": "streetcomplete--streetcomplete-5818",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 3359,
+      "importable": false,
+      "instance_id": "streetcomplete__StreetComplete-5686",
+      "license": "GPL-3.0",
+      "n_f2p": 90,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": null,
+      "task_id": "streetcomplete--streetcomplete-5686",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1477,
+      "importable": false,
+      "instance_id": "streetcomplete__StreetComplete-5463",
+      "license": "GPL-3.0",
+      "n_f2p": 42,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": null,
+      "task_id": "streetcomplete--streetcomplete-5463",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2602,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5461",
+      "license": "GPL-3.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5461",
+      "task_id": "streetcomplete--streetcomplete-5461",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 430,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5273",
+      "license": "GPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5273",
+      "task_id": "streetcomplete--streetcomplete-5273",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 346,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-5060",
+      "license": "GPL-3.0",
+      "n_f2p": 23,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-5060",
+      "task_id": "streetcomplete--streetcomplete-5060",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 234,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4988",
+      "license": "GPL-3.0",
+      "n_f2p": 64,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4988",
+      "task_id": "streetcomplete--streetcomplete-4988",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 84,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4798",
+      "license": "GPL-3.0",
+      "n_f2p": 38,
+      "n_p2p": 9,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4798",
+      "task_id": "streetcomplete--streetcomplete-4798",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 849,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4768",
+      "license": "GPL-3.0",
+      "n_f2p": 43,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4768",
+      "task_id": "streetcomplete--streetcomplete-4768",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1151,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4569",
+      "license": "GPL-3.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4569",
+      "task_id": "streetcomplete--streetcomplete-4569",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 51,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4472",
+      "license": "GPL-3.0",
+      "n_f2p": 44,
+      "n_p2p": 10,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4472",
+      "task_id": "streetcomplete--streetcomplete-4472",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1495,
+      "importable": false,
+      "instance_id": "streetcomplete__StreetComplete-4471",
+      "license": "GPL-3.0",
+      "n_f2p": 262,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": null,
+      "task_id": "streetcomplete--streetcomplete-4471",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 169,
+      "importable": true,
+      "instance_id": "streetcomplete__StreetComplete-4202",
+      "license": "GPL-3.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "streetcomplete/StreetComplete",
+      "task_dir": "build\\tasks\\mobiledev-bench\\streetcomplete--streetcomplete-4202",
+      "task_id": "streetcomplete--streetcomplete-4202",
+      "test_tasks": [
+        ":app:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1555,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9852",
+      "license": "Apache-2.0",
+      "n_f2p": 57,
+      "n_p2p": 15,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9852",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest",
+        ":core:common:testDebugUnitTest",
+        ":feature:settings:import:testDebugUnitTest",
+        ":core:android:account:testDebugUnitTest",
+        ":feature:widget:unread:testDebugUnitTest",
+        ":feature:account:storage:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 373,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9831",
+      "license": "Apache-2.0",
+      "n_f2p": 14,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9831",
+      "task_id": "thunderbird--thunderbird-android-9831",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 204,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9823",
+      "license": "Apache-2.0",
+      "n_f2p": 74,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9823",
+      "task_id": "thunderbird--thunderbird-android-9823",
+      "test_tasks": [
+        ":mail:protocols:smtp:test",
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 840,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9818",
+      "license": "Apache-2.0",
+      "n_f2p": 32,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9818",
+      "test_tasks": [
+        ":legacy:ui:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 394,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9772",
+      "license": "Apache-2.0",
+      "n_f2p": 143,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9772",
+      "test_tasks": [
+        ":backend:imap:test",
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 311,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9759",
+      "license": "Apache-2.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9759",
+      "task_id": "thunderbird--thunderbird-android-9759",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 83,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9716",
+      "license": "Apache-2.0",
+      "n_f2p": 24,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9716",
+      "task_id": "thunderbird--thunderbird-android-9716",
+      "test_tasks": [
+        ":feature:navigation:drawer:dropdown:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 795,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9710",
+      "license": "Apache-2.0",
+      "n_f2p": 37,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9710",
+      "test_tasks": [
+        ":feature:navigation:drawer:dropdown:testDebugUnitTest",
+        ":legacy:core:testDebugUnitTest",
+        ":feature:navigation:drawer:siderail:testDebugUnitTest",
+        ":feature:account:storage:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1362,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9705",
+      "license": "Apache-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "fix_touches_dependency_baseline"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9705",
+      "test_tasks": [
+        ":core:configstore:impl-backend:testDebugUnitTest",
+        ":core:configstore:api:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1373,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9642",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9642",
+      "task_id": "thunderbird--thunderbird-android-9642",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 30,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9640",
+      "license": "Apache-2.0",
+      "n_f2p": 6,
+      "n_p2p": 7,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9640",
+      "task_id": "thunderbird--thunderbird-android-9640",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 929,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9628",
+      "license": "Apache-2.0",
+      "n_f2p": 64,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9628",
+      "test_tasks": [
+        ":feature:notification:api:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 124,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9562",
+      "license": "Apache-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9562",
+      "task_id": "thunderbird--thunderbird-android-9562",
+      "test_tasks": [
+        ":legacy:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1543,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9509",
+      "license": "Apache-2.0",
+      "n_f2p": 76,
+      "n_p2p": 4,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9509",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest",
+        ":legacy:ui:legacy:testDebugUnitTest",
+        ":legacy:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 421,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9508",
+      "license": "Apache-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9508",
+      "test_tasks": [
+        ":feature:notification:api:testDebugUnitTest",
+        ":feature:notification:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1671,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9481",
+      "license": "Apache-2.0",
+      "n_f2p": 41,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9481",
+      "test_tasks": [
+        ":feature:widget:unread:testDebugUnitTest",
+        ":feature:navigation:drawer:siderail:testDebugUnitTest",
+        ":feature:search:impl-legacy:testDebugUnitTest",
+        ":feature:navigation:drawer:dropdown:testDebugUnitTest",
+        ":legacy:storage:testDebugUnitTest",
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 57,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9469",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9469",
+      "task_id": "thunderbird--thunderbird-android-9469",
+      "test_tasks": [
+        ":feature:account:storage:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 251,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9423",
+      "license": "Apache-2.0",
+      "n_f2p": 104,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9423",
+      "task_id": "thunderbird--thunderbird-android-9423",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest",
+        ":legacy:ui:legacy:testDebugUnitTest",
+        ":feature:mail:message:list:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 114,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9399",
+      "license": "Apache-2.0",
+      "n_f2p": 6,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9399",
+      "task_id": "thunderbird--thunderbird-android-9399",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 830,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9398",
+      "license": "Apache-2.0",
+      "n_f2p": 110,
+      "n_p2p": 3,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_touches_dependency_baseline",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9398",
+      "test_tasks": [
+        ":legacy:ui:legacy:testDebugUnitTest",
+        ":core:common:testDebugUnitTest",
+        ":core:testing:testDebugUnitTest",
+        ":legacy:core:testDebugUnitTest",
+        ":feature:funding:googleplay:testDebugUnitTest",
+        ":core:logging:api:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 3694,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9360",
+      "license": "Apache-2.0",
+      "n_f2p": 32,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9360",
+      "test_tasks": [
+        ":feature:navigation:drawer:dropdown:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 455,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9332",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9332",
+      "test_tasks": [
+        ":legacy:storage:testDebugUnitTest",
+        ":feature:account:avatar:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 105,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9299",
+      "license": "Apache-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9299",
+      "task_id": "thunderbird--thunderbird-android-9299",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 362,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9279",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9279",
+      "task_id": "thunderbird--thunderbird-android-9279",
+      "test_tasks": [
+        ":feature:navigation:drawer:dropdown:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 723,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9268",
+      "license": "Apache-2.0",
+      "n_f2p": 21,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9268",
+      "task_id": "thunderbird--thunderbird-android-9268",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 263,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-9241",
+      "license": "Apache-2.0",
+      "n_f2p": 247,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-9241",
+      "task_id": "thunderbird--thunderbird-android-9241",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 3940,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9182",
+      "license": "Apache-2.0",
+      "n_f2p": 239,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9182",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest",
+        ":legacy:ui:legacy:testDebugUnitTest",
+        ":legacy:mailstore:testDebugUnitTest",
+        ":feature:widget:unread:testDebugUnitTest",
+        ":legacy:common:testDebugUnitTest",
+        ":legacy:storage:testDebugUnitTest",
+        ":app-common:testDebugUnitTest",
+        ":feature:migration:qrcode:testDebugUnitTest",
+        ":core:android:account:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 4820,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9158",
+      "license": "Apache-2.0",
+      "n_f2p": 56,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9158",
+      "test_tasks": [
+        ":feature:mail:message:list:testDebugUnitTest",
+        ":backend:imap:test",
+        ":legacy:core:testDebugUnitTest",
+        ":mail:protocols:imap:test",
+        ":app-thunderbird:testFossDebugUnitTest",
+        ":app-k9mail:testFossDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 164,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9150",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9150",
+      "test_tasks": [
+        ":feature:account:settings:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 347,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9137",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9137",
+      "test_tasks": [
+        ":legacy:storage:testDebugUnitTest",
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 2385,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9130",
+      "license": "Apache-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "fix_touches_dependency_baseline"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9130",
+      "test_tasks": [
+        ":app-thunderbird:testFossDebugUnitTest",
+        ":app-k9mail:testFossDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1343,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9030",
+      "license": "Apache-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9030",
+      "test_tasks": [
+        ":feature:account:settings:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 694,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-9026",
+      "license": "Apache-2.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-9026",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest",
+        ":feature:account:settings:impl:testDebugUnitTest",
+        ":app-thunderbird:testFossDebugUnitTest",
+        ":app-k9mail:testFossDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 116,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8999",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8999",
+      "test_tasks": [
+        ":legacy:ui:legacy:testDebugUnitTest",
+        ":core:android:logging:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8903",
+      "license": "Apache-2.0",
+      "n_f2p": 1,
+      "n_p2p": 2,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8903",
+      "task_id": "thunderbird--thunderbird-android-8903",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 485,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8889",
+      "license": "Apache-2.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency",
+        "fix_touches_dependency_baseline"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8889",
+      "test_tasks": [
+        ":feature:funding:googleplay:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 522,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8846",
+      "license": "Apache-2.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8846",
+      "task_id": "thunderbird--thunderbird-android-8846",
+      "test_tasks": [
+        ":feature:widget:unread:testDebugUnitTest",
+        ":feature:navigation:drawer:testDebugUnitTest",
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 258,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8813",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8813",
+      "task_id": "thunderbird--thunderbird-android-8813",
+      "test_tasks": [
+        ":legacy:preferences:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 49,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8804",
+      "license": "Apache-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8804",
+      "task_id": "thunderbird--thunderbird-android-8804",
+      "test_tasks": [
+        ":feature:account:server:settings:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 416,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8547",
+      "license": "Apache-2.0",
+      "n_f2p": 21,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8547",
+      "test_tasks": [
+        ":feature:navigation:drawer:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-8306",
+      "license": "Apache-2.0",
+      "n_f2p": 103,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-8306",
+      "test_tasks": [
+        ":feature:account:server:settings:testDebugUnitTest",
+        ":feature:account:setup:testDebugUnitTest",
+        ":feature:account:oauth:testDebugUnitTest",
+        ":feature:account:edit:testDebugUnitTest",
+        ":feature:navigation:drawer:testDebugUnitTest",
+        ":feature:migration:qrcode:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 406,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8305",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8305",
+      "task_id": "thunderbird--thunderbird-android-8305",
+      "test_tasks": [
+        ":legacy:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8259",
+      "license": "Apache-2.0",
+      "n_f2p": 13,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8259",
+      "task_id": "thunderbird--thunderbird-android-8259",
+      "test_tasks": [
+        ":legacy:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 560,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8176",
+      "license": "Apache-2.0",
+      "n_f2p": 24,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8176",
+      "task_id": "thunderbird--thunderbird-android-8176",
+      "test_tasks": [
+        ":feature:navigation:drawer:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 403,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8166",
+      "license": "Apache-2.0",
+      "n_f2p": 19,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8166",
+      "task_id": "thunderbird--thunderbird-android-8166",
+      "test_tasks": [
+        ":feature:navigation:drawer:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 643,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-8107",
+      "license": "Apache-2.0",
+      "n_f2p": 12,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-8107",
+      "task_id": "thunderbird--thunderbird-android-8107",
+      "test_tasks": [
+        ":feature:settings:import:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 331,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7978",
+      "license": "Apache-2.0",
+      "n_f2p": 40,
+      "n_p2p": 6,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7978",
+      "task_id": "thunderbird--thunderbird-android-7978",
+      "test_tasks": [
+        ":feature:account:server:settings:testDebugUnitTest",
+        ":mail:protocols:smtp:test",
+        ":feature:account:common:testDebugUnitTest",
+        ":app:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 302,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7891",
+      "license": "Apache-2.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7891",
+      "task_id": "thunderbird--thunderbird-android-7891",
+      "test_tasks": [
+        ":app:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 65,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7699",
+      "license": "Apache-2.0",
+      "n_f2p": 16,
+      "n_p2p": 2,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7699",
+      "task_id": "thunderbird--thunderbird-android-7699",
+      "test_tasks": [
+        ":core:ui:compose:designsystem:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 237,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7569",
+      "license": "Apache-2.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7569",
+      "task_id": "thunderbird--thunderbird-android-7569",
+      "test_tasks": [
+        ":feature:account:setup:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1870,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7489",
+      "license": "Apache-2.0",
+      "n_f2p": 84,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7489",
+      "task_id": "thunderbird--thunderbird-android-7489",
+      "test_tasks": [
+        ":feature:account:setup:testDebugUnitTest",
+        ":feature:account:oauth:testDebugUnitTest",
+        ":app:k9mail:testDebugUnitTest",
+        ":feature:account:common:testDebugUnitTest",
+        ":feature:account:edit:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 138,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7403",
+      "license": "Apache-2.0",
+      "n_f2p": 99,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7403",
+      "task_id": "thunderbird--thunderbird-android-7403",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 37,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7377",
+      "license": "Apache-2.0",
+      "n_f2p": 5,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7377",
+      "task_id": "thunderbird--thunderbird-android-7377",
+      "test_tasks": [
+        ":feature:account:server:settings:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 164,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7365",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7365",
+      "task_id": "thunderbird--thunderbird-android-7365",
+      "test_tasks": [
+        ":feature:account:edit:testDebugUnitTest",
+        ":app:k9mail:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 136,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7340",
+      "license": "Apache-2.0",
+      "n_f2p": 10,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7340",
+      "task_id": "thunderbird--thunderbird-android-7340",
+      "test_tasks": [
+        ":feature:account:setup:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1658,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-7299",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-7299",
+      "test_tasks": [
+        ":core:android:permissions:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7180",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 25,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7180",
+      "task_id": "thunderbird--thunderbird-android-7180",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 35,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7179",
+      "license": "Apache-2.0",
+      "n_f2p": 5,
+      "n_p2p": 12,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7179",
+      "task_id": "thunderbird--thunderbird-android-7179",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 97,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-7113",
+      "license": "Apache-2.0",
+      "n_f2p": 17,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-7113",
+      "task_id": "thunderbird--thunderbird-android-7113",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 45,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6946",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6946",
+      "task_id": "thunderbird--thunderbird-android-6946",
+      "test_tasks": [
+        ":app:ui:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 264,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6846",
+      "license": "Apache-2.0",
+      "n_f2p": 78,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6846",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6840",
+      "license": "Apache-2.0",
+      "n_f2p": 11,
+      "n_p2p": 1,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6840",
+      "task_id": "thunderbird--thunderbird-android-6840",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6811",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 2,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6811",
+      "task_id": "thunderbird--thunderbird-android-6811",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 99,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6762",
+      "license": "Apache-2.0",
+      "n_f2p": 57,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6762",
+      "task_id": "thunderbird--thunderbird-android-6762",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 137,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6693",
+      "license": "Apache-2.0",
+      "n_f2p": 24,
+      "n_p2p": 8,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6693",
+      "task_id": "thunderbird--thunderbird-android-6693",
+      "test_tasks": [
+        ":app:ui:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6624",
+      "license": "Apache-2.0",
+      "n_f2p": 72,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6624",
+      "task_id": "thunderbird--thunderbird-android-6624",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 6119,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6618",
+      "license": "Apache-2.0",
+      "n_f2p": 108,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6618",
+      "test_tasks": [
+        ":app:ui:legacy:testDebugUnitTest",
+        ":app:core:testDebugUnitTest",
+        ":app:storage:testDebugUnitTest",
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 1601,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6600",
+      "license": "Apache-2.0",
+      "n_f2p": 85,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6600",
+      "test_tasks": [
+        ":mail:protocols:imap:test",
+        ":app:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6588",
+      "license": "Apache-2.0",
+      "n_f2p": 11,
+      "n_p2p": 20,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6588",
+      "task_id": "thunderbird--thunderbird-android-6588",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 157,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6555",
+      "license": "Apache-2.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6555",
+      "test_tasks": [
+        ":app:k9mail:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 136,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6546",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6546",
+      "task_id": "thunderbird--thunderbird-android-6546",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 31,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6486",
+      "license": "Apache-2.0",
+      "n_f2p": 26,
+      "n_p2p": 59,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6486",
+      "task_id": "thunderbird--thunderbird-android-6486",
+      "test_tasks": [
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 326,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6482",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6482",
+      "task_id": "thunderbird--thunderbird-android-6482",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 106,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6435",
+      "license": "Apache-2.0",
+      "n_f2p": 10,
+      "n_p2p": 2,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6435",
+      "task_id": "thunderbird--thunderbird-android-6435",
+      "test_tasks": [
+        ":app:storage:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6424",
+      "license": "Apache-2.0",
+      "n_f2p": 28,
+      "n_p2p": 2,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6424",
+      "task_id": "thunderbird--thunderbird-android-6424",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6360",
+      "license": "Apache-2.0",
+      "n_f2p": 27,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6360",
+      "task_id": "thunderbird--thunderbird-android-6360",
+      "test_tasks": [
+        ":mail:protocols:smtp:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 1097,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6335",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6335",
+      "task_id": "thunderbird--thunderbird-android-6335",
+      "test_tasks": [
+        ":app:ui:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 273,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6280",
+      "license": "Apache-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6280",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 3590,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6263",
+      "license": "Apache-2.0",
+      "n_f2p": 89,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6263",
+      "task_id": "thunderbird--thunderbird-android-6263",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest",
+        ":app:storage:testDebugUnitTest",
+        ":app:ui:legacy:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6256",
+      "license": "Apache-2.0",
+      "n_f2p": 23,
+      "n_p2p": 3,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6256",
+      "task_id": "thunderbird--thunderbird-android-6256",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 97,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6190",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 3,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6190",
+      "task_id": "thunderbird--thunderbird-android-6190",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 15,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6172",
+      "license": "Apache-2.0",
+      "n_f2p": 9,
+      "n_p2p": 15,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6172",
+      "task_id": "thunderbird--thunderbird-android-6172",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 1281,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-6082",
+      "license": "Apache-2.0",
+      "n_f2p": 85,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-6082",
+      "test_tasks": [
+        ":mail:protocols:smtp:test",
+        ":mail:protocols:imap:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 49,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6080",
+      "license": "Apache-2.0",
+      "n_f2p": 19,
+      "n_p2p": 18,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6080",
+      "task_id": "thunderbird--thunderbird-android-6080",
+      "test_tasks": [
+        ":mail:protocols:smtp:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 239,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6043",
+      "license": "Apache-2.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6043",
+      "task_id": "thunderbird--thunderbird-android-6043",
+      "test_tasks": [
+        ":mail:protocols:webdav:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 37,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6041",
+      "license": "Apache-2.0",
+      "n_f2p": 34,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6041",
+      "task_id": "thunderbird--thunderbird-android-6041",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 95,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-6030",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 11,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-6030",
+      "task_id": "thunderbird--thunderbird-android-6030",
+      "test_tasks": [
+        ":mail:common:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 39,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5989",
+      "license": "Apache-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5989",
+      "task_id": "thunderbird--thunderbird-android-5989",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 82,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5958",
+      "license": "Apache-2.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5958",
+      "task_id": "thunderbird--thunderbird-android-5958",
+      "test_tasks": [
+        ":mail:common:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 130,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5946",
+      "license": "Apache-2.0",
+      "n_f2p": 8,
+      "n_p2p": 13,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5946",
+      "task_id": "thunderbird--thunderbird-android-5946",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 22,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5896",
+      "license": "Apache-2.0",
+      "n_f2p": 8,
+      "n_p2p": 16,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5896",
+      "task_id": "thunderbird--thunderbird-android-5896",
+      "test_tasks": [
+        ":app:html-cleaner:test"
+      ]
+    },
+    {
+      "fix_patch_lines": 55,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5881",
+      "license": "Apache-2.0",
+      "n_f2p": 26,
+      "n_p2p": 6,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5881",
+      "task_id": "thunderbird--thunderbird-android-5881",
+      "test_tasks": [
+        ":mail:protocols:pop3:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 14,
+      "importable": true,
+      "instance_id": "thunderbird__thunderbird-android-5812",
+      "license": "Apache-2.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\thunderbird--thunderbird-android-5812",
+      "task_id": "thunderbird--thunderbird-android-5812",
+      "test_tasks": [
+        ":app:core:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 442,
+      "importable": false,
+      "instance_id": "thunderbird__thunderbird-android-5765",
+      "license": "Apache-2.0",
+      "n_f2p": 38,
+      "n_p2p": 0,
+      "public_pack_ok": true,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "thunderbird/thunderbird-android",
+      "task_dir": null,
+      "task_id": "thunderbird--thunderbird-android-5765",
+      "test_tasks": [
+        ":mail:common:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 66,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4993",
+      "license": "GPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4993",
+      "task_id": "tuskyapp--tusky-4993",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 19,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4821",
+      "license": "GPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 3,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4821",
+      "task_id": "tuskyapp--tusky-4821",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4642",
+      "license": "GPL-3.0",
+      "n_f2p": 102,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4642",
+      "task_id": "tuskyapp--tusky-4642",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 49,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4638",
+      "license": "GPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 5,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4638",
+      "task_id": "tuskyapp--tusky-4638",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 479,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4599",
+      "license": "GPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4599",
+      "task_id": "tuskyapp--tusky-4599",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 50,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4152",
+      "license": "GPL-3.0",
+      "n_f2p": 32,
+      "n_p2p": 71,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4152",
+      "task_id": "tuskyapp--tusky-4152",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 65,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-4103",
+      "license": "GPL-3.0",
+      "n_f2p": 34,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-4103",
+      "task_id": "tuskyapp--tusky-4103",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 106,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-3448",
+      "license": "GPL-3.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-3448",
+      "task_id": "tuskyapp--tusky-3448",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 18,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-3341",
+      "license": "GPL-3.0",
+      "n_f2p": 1,
+      "n_p2p": 13,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-3341",
+      "task_id": "tuskyapp--tusky-3341",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 125,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-2945",
+      "license": "GPL-3.0",
+      "n_f2p": 32,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-2945",
+      "task_id": "tuskyapp--tusky-2945",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 82,
+      "importable": false,
+      "instance_id": "tuskyapp__Tusky-2757",
+      "license": "GPL-3.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": null,
+      "task_id": "tuskyapp--tusky-2757",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 21,
+      "importable": true,
+      "instance_id": "tuskyapp__Tusky-2713",
+      "license": "GPL-3.0",
+      "n_f2p": 15,
+      "n_p2p": 1,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "tuskyapp/Tusky",
+      "task_dir": "build\\tasks\\mobiledev-bench\\tuskyapp--tusky-2713",
+      "task_id": "tuskyapp--tusky-2713",
+      "test_tasks": [
+        ":app:testBlueDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 40,
+      "importable": true,
+      "instance_id": "PaulWoitaschek__Voice-3134",
+      "license": "GPL-3.0",
+      "n_f2p": 7,
+      "n_p2p": 2,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "PaulWoitaschek/Voice",
+      "task_dir": "build\\tasks\\mobiledev-bench\\paulwoitaschek--voice-3134",
+      "task_id": "paulwoitaschek--voice-3134",
+      "test_tasks": [
+        ":core:search:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 126,
+      "importable": true,
+      "instance_id": "PaulWoitaschek__Voice-3112",
+      "license": "GPL-3.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "PaulWoitaschek/Voice",
+      "task_dir": "build\\tasks\\mobiledev-bench\\paulwoitaschek--voice-3112",
+      "task_id": "paulwoitaschek--voice-3112",
+      "test_tasks": [
+        ":core:sleeptimer:impl:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 960,
+      "importable": true,
+      "instance_id": "PaulWoitaschek__Voice-2865",
+      "license": "GPL-3.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "PaulWoitaschek/Voice",
+      "task_dir": "build\\tasks\\mobiledev-bench\\paulwoitaschek--voice-2865",
+      "task_id": "paulwoitaschek--voice-2865",
+      "test_tasks": [
+        ":scanner:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 326,
+      "importable": false,
+      "instance_id": "PaulWoitaschek__Voice-1839",
+      "license": "GPL-3.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "PaulWoitaschek/Voice",
+      "task_dir": null,
+      "task_id": "paulwoitaschek--voice-1839",
+      "test_tasks": [
+        ":playbackScreen:testDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 540,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-20925",
+      "license": "GPL-2.0",
+      "n_f2p": 81,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-20925",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 233,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20895",
+      "license": "GPL-2.0",
+      "n_f2p": 54,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20895",
+      "task_id": "wordpress-mobile--wordpress-android-20895",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 216,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20860",
+      "license": "GPL-2.0",
+      "n_f2p": 34,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20860",
+      "task_id": "wordpress-mobile--wordpress-android-20860",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 362,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20844",
+      "license": "GPL-2.0",
+      "n_f2p": 31,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20844",
+      "task_id": "wordpress-mobile--wordpress-android-20844",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 775,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20842",
+      "license": "GPL-2.0",
+      "n_f2p": 27,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20842",
+      "task_id": "wordpress-mobile--wordpress-android-20842",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 192,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20839",
+      "license": "GPL-2.0",
+      "n_f2p": 24,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20839",
+      "task_id": "wordpress-mobile--wordpress-android-20839",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 96,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20781",
+      "license": "GPL-2.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20781",
+      "task_id": "wordpress-mobile--wordpress-android-20781",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 629,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20769",
+      "license": "GPL-2.0",
+      "n_f2p": 13,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20769",
+      "task_id": "wordpress-mobile--wordpress-android-20769",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 478,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20763",
+      "license": "GPL-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20763",
+      "task_id": "wordpress-mobile--wordpress-android-20763",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 115,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20756",
+      "license": "GPL-2.0",
+      "n_f2p": 9,
+      "n_p2p": 5,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20756",
+      "task_id": "wordpress-mobile--wordpress-android-20756",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 55,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20750",
+      "license": "GPL-2.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20750",
+      "task_id": "wordpress-mobile--wordpress-android-20750",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 668,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20729",
+      "license": "GPL-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20729",
+      "task_id": "wordpress-mobile--wordpress-android-20729",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1289,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20684",
+      "license": "GPL-2.0",
+      "n_f2p": 20,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20684",
+      "task_id": "wordpress-mobile--wordpress-android-20684",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 108,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20608",
+      "license": "GPL-2.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20608",
+      "task_id": "wordpress-mobile--wordpress-android-20608",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 254,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-20606",
+      "license": "GPL-2.0",
+      "n_f2p": 43,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "test_patch_touches_main"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-20606",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 579,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20603",
+      "license": "GPL-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20603",
+      "task_id": "wordpress-mobile--wordpress-android-20603",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 66,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-20596",
+      "license": "GPL-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-20596",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 186,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20586",
+      "license": "GPL-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20586",
+      "task_id": "wordpress-mobile--wordpress-android-20586",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 25,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20564",
+      "license": "GPL-2.0",
+      "n_f2p": 14,
+      "n_p2p": 5,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20564",
+      "task_id": "wordpress-mobile--wordpress-android-20564",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 104,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20526",
+      "license": "GPL-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20526",
+      "task_id": "wordpress-mobile--wordpress-android-20526",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1537,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20513",
+      "license": "GPL-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20513",
+      "task_id": "wordpress-mobile--wordpress-android-20513",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 13,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20480",
+      "license": "GPL-2.0",
+      "n_f2p": 1,
+      "n_p2p": 9,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20480",
+      "task_id": "wordpress-mobile--wordpress-android-20480",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 780,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20477",
+      "license": "GPL-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20477",
+      "task_id": "wordpress-mobile--wordpress-android-20477",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 387,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20216",
+      "license": "GPL-2.0",
+      "n_f2p": 18,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20216",
+      "task_id": "wordpress-mobile--wordpress-android-20216",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 206,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20186",
+      "license": "GPL-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20186",
+      "task_id": "wordpress-mobile--wordpress-android-20186",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 172,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20153",
+      "license": "GPL-2.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20153",
+      "task_id": "wordpress-mobile--wordpress-android-20153",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 423,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20130",
+      "license": "GPL-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20130",
+      "task_id": "wordpress-mobile--wordpress-android-20130",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 79,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20090",
+      "license": "GPL-2.0",
+      "n_f2p": 35,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20090",
+      "task_id": "wordpress-mobile--wordpress-android-20090",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1036,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20077",
+      "license": "GPL-2.0",
+      "n_f2p": 34,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20077",
+      "task_id": "wordpress-mobile--wordpress-android-20077",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1009,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19996",
+      "license": "GPL-2.0",
+      "n_f2p": 29,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19996",
+      "task_id": "wordpress-mobile--wordpress-android-19996",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 56,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19940",
+      "license": "GPL-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19940",
+      "task_id": "wordpress-mobile--wordpress-android-19940",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 184,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19860",
+      "license": "GPL-2.0",
+      "n_f2p": 23,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19860",
+      "task_id": "wordpress-mobile--wordpress-android-19860",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 122,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-21707",
+      "license": "GPL-2.0",
+      "n_f2p": 33,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-21707",
+      "task_id": "wordpress-mobile--wordpress-android-21707",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 293,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-21466",
+      "license": "GPL-2.0",
+      "n_f2p": 27,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-21466",
+      "task_id": "wordpress-mobile--wordpress-android-21466",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 4642,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-20947",
+      "license": "GPL-2.0",
+      "n_f2p": 113,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-20947",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 36,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20940",
+      "license": "GPL-2.0",
+      "n_f2p": 4,
+      "n_p2p": 6,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20940",
+      "task_id": "wordpress-mobile--wordpress-android-20940",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 79,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20939",
+      "license": "GPL-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20939",
+      "task_id": "wordpress-mobile--wordpress-android-20939",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 326,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20791",
+      "license": "GPL-2.0",
+      "n_f2p": 16,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20791",
+      "task_id": "wordpress-mobile--wordpress-android-20791",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 865,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20747",
+      "license": "GPL-2.0",
+      "n_f2p": 11,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20747",
+      "task_id": "wordpress-mobile--wordpress-android-20747",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 16,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20745",
+      "license": "GPL-2.0",
+      "n_f2p": 15,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20745",
+      "task_id": "wordpress-mobile--wordpress-android-20745",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 127,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20658",
+      "license": "GPL-2.0",
+      "n_f2p": 28,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20658",
+      "task_id": "wordpress-mobile--wordpress-android-20658",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 159,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20600",
+      "license": "GPL-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20600",
+      "task_id": "wordpress-mobile--wordpress-android-20600",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 34,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20589",
+      "license": "GPL-2.0",
+      "n_f2p": 17,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20589",
+      "task_id": "wordpress-mobile--wordpress-android-20589",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 43,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20572",
+      "license": "GPL-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20572",
+      "task_id": "wordpress-mobile--wordpress-android-20572",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 63,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20571",
+      "license": "GPL-2.0",
+      "n_f2p": 8,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20571",
+      "task_id": "wordpress-mobile--wordpress-android-20571",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 73,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20103",
+      "license": "GPL-2.0",
+      "n_f2p": 31,
+      "n_p2p": 15,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20103",
+      "task_id": "wordpress-mobile--wordpress-android-20103",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 203,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20094",
+      "license": "GPL-2.0",
+      "n_f2p": 25,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20094",
+      "task_id": "wordpress-mobile--wordpress-android-20094",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 186,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-20057",
+      "license": "GPL-2.0",
+      "n_f2p": 5,
+      "n_p2p": 3,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-20057",
+      "task_id": "wordpress-mobile--wordpress-android-20057",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 158,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19834",
+      "license": "GPL-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19834",
+      "task_id": "wordpress-mobile--wordpress-android-19834",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 417,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19818",
+      "license": "GPL-2.0",
+      "n_f2p": 6,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19818",
+      "task_id": "wordpress-mobile--wordpress-android-19818",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 178,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19804",
+      "license": "GPL-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19804",
+      "task_id": "wordpress-mobile--wordpress-android-19804",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 75,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19801",
+      "license": "GPL-2.0",
+      "n_f2p": 9,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19801",
+      "task_id": "wordpress-mobile--wordpress-android-19801",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 273,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19790",
+      "license": "GPL-2.0",
+      "n_f2p": 120,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19790",
+      "task_id": "wordpress-mobile--wordpress-android-19790",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 54,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19773",
+      "license": "GPL-2.0",
+      "n_f2p": 22,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19773",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 395,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19741",
+      "license": "GPL-2.0",
+      "n_f2p": 3,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19741",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 45,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19730",
+      "license": "GPL-2.0",
+      "n_f2p": 1,
+      "n_p2p": 2,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19730",
+      "task_id": "wordpress-mobile--wordpress-android-19730",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 618,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19721",
+      "license": "GPL-2.0",
+      "n_f2p": 107,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19721",
+      "task_id": "wordpress-mobile--wordpress-android-19721",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 1288,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19708",
+      "license": "GPL-2.0",
+      "n_f2p": 36,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "fix_adds_dependency"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19708",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 33,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19656",
+      "license": "GPL-2.0",
+      "n_f2p": 12,
+      "n_p2p": 19,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19656",
+      "task_id": "wordpress-mobile--wordpress-android-19656",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 284,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19603",
+      "license": "GPL-2.0",
+      "n_f2p": 165,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19603",
+      "task_id": "wordpress-mobile--wordpress-android-19603",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 91,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19597",
+      "license": "GPL-2.0",
+      "n_f2p": 19,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19597",
+      "task_id": "wordpress-mobile--wordpress-android-19597",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 225,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19593",
+      "license": "GPL-2.0",
+      "n_f2p": 2,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19593",
+      "task_id": "wordpress-mobile--wordpress-android-19593",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 47,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19590",
+      "license": "GPL-2.0",
+      "n_f2p": 5,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19590",
+      "task_id": "wordpress-mobile--wordpress-android-19590",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 236,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19585",
+      "license": "GPL-2.0",
+      "n_f2p": 19,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19585",
+      "task_id": "wordpress-mobile--wordpress-android-19585",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 76,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19577",
+      "license": "GPL-2.0",
+      "n_f2p": 22,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19577",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 79,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19574",
+      "license": "GPL-2.0",
+      "n_f2p": 10,
+      "n_p2p": 3,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19574",
+      "task_id": "wordpress-mobile--wordpress-android-19574",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 252,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19547",
+      "license": "GPL-2.0",
+      "n_f2p": 14,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19547",
+      "task_id": "wordpress-mobile--wordpress-android-19547",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 180,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19509",
+      "license": "GPL-2.0",
+      "n_f2p": 4,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19509",
+      "task_id": "wordpress-mobile--wordpress-android-19509",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 744,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19424",
+      "license": "GPL-2.0",
+      "n_f2p": 7,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19424",
+      "task_id": "wordpress-mobile--wordpress-android-19424",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 978,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19135",
+      "license": "GPL-2.0",
+      "n_f2p": 233,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build",
+        "test_patch_touches_main"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19135",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 287,
+      "importable": false,
+      "instance_id": "wordpress-mobile__WordPress-Android-19112",
+      "license": "GPL-2.0",
+      "n_f2p": 217,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [
+        "fix_touches_build"
+      ],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": null,
+      "task_id": "wordpress-mobile--wordpress-android-19112",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 126,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-19059",
+      "license": "GPL-2.0",
+      "n_f2p": 26,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-19059",
+      "task_id": "wordpress-mobile--wordpress-android-19059",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    },
+    {
+      "fix_patch_lines": 35,
+      "importable": true,
+      "instance_id": "wordpress-mobile__WordPress-Android-18959",
+      "license": "GPL-2.0",
+      "n_f2p": 1,
+      "n_p2p": 0,
+      "public_pack_ok": false,
+      "reasons": [],
+      "repo": "wordpress-mobile/WordPress-Android",
+      "task_dir": "build\\tasks\\mobiledev-bench\\wordpress-mobile--wordpress-android-18959",
+      "task_id": "wordpress-mobile--wordpress-android-18959",
+      "test_tasks": [
+        ":WordPress:testWordpressVanillaDebugUnitTest"
+      ]
+    }
+  ],
+  "image_pattern": "ghcr.io/mobiledev-bench/mobiledevbench/{org}_mb_{repo}:pr-{number}",
+  "n_android_rows": 328,
+  "n_importable": 230,
+  "n_public_pack_ok": 77,
+  "n_written": 230,
+  "pack_version": "0.1.0",
+  "paper": "Fakorede, Upadhyay, Siddique and Farooq, MobileDev-Bench, arXiv 2603.24946 (2026)",
+  "repo_path": "/home/{repo}",
+  "schema": "probo-mdb-import/1"
+}

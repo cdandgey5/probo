@@ -34,14 +34,17 @@ repository at `/app` at the base commit.
 | `source` | `repo`, `license`, `base_commit` | Upstream repository, SPDX license, pinned commit. |
 | | `issue_url`, `pr_url`, `merge_date` | Provenance; merge date drives the contamination split. |
 | | `attribution` | One-paragraph task card text. Issue text is user content not covered by the repo license; say so. |
-| `environment` | `docker_image` or `repo_dir` | Exactly one. |
+| `environment` | `docker_image`, `repo_dir` or `image_with_repo` | Exactly one. `image_with_repo` is a prebuilt image that already holds the repository (a MobileDev-Bench instance image, say); the converter generates an overlay Dockerfile around it. |
+| | `image_repo_path` | Where the repository lives inside `image_with_repo` (default `/app`). |
 | | `base_image` | Base for the generated Dockerfile (inline repos only). |
-| | `jdk`, `gradle`, `agp` | Toolchain versions, recorded in every result. |
+| | `jdk`, `gradle`, `agp` | Toolchain versions, recorded in every result. Optional; validate-task warns when missing. |
 | | `cpus`, `memory_mb`, `build_timeout_sec` | Container limits for Harbor. Android builds want 8 to 12 GB. |
 | | `agent_user` | Non-root user for the agent phase. Unset until verified on Docker (P0-C). |
 | `verification` | `test_tasks` | Fully qualified Gradle task paths, e.g. `:app:testDemoDebugUnitTest`. Only these run. |
 | | `results_dirs` | Override of the JUnit XML directories derived from the task paths. |
 | | `hidden_tests` | Repository-relative paths overwritten from `hidden/`. Must be test source set paths. |
+| | `hidden_patch` | A git-format patch touching only test source sets, applied by the grader onto the restored tree (SWE-bench style). Can be combined with `hidden_tests`. |
+| | `test_filters` | Per test task, the `--tests` patterns to pass. Keys must be entries of `test_tasks`; Gradle binds each pattern to the task before it. |
 | | `f2p`, `p2p` | Test IDs as `classname#method`, without JUnit 5's trailing `()`. Disjoint. |
 | | `agent_timeout_sec`, `verify_timeout_sec` | Harbor phase timeouts. |
 | | `gradle_timeout_sec` | The grader's own kill timer; defaults to the verify timeout minus 60 s. |
@@ -70,12 +73,13 @@ no dependency; the instruction does not name a file the gold patch touches
 |---|---|
 | `instruction.md` | The task instruction, the interface contract when present, and a fixed "Environment and rules" section naming the test command and the protected files. |
 | `task.toml` | Harbor schema 1.4. `artifacts = ["/tmp/harbor-capture"]`; `[verifier] environment_mode = "separate"`; `[verifier.environment] network_mode = "no-network"`; a `[[verifier.collect]]` hook that captures the agent's diff; agent and verifier timeouts; `[environment]` limits and `docker_image` when image-based; `[metadata]` with the task ID, pack version, F2P and P2P IDs, test tasks, toolchain versions and source provenance. |
-| `environment/Dockerfile`, `environment/repo/` | Inline repositories only: the generated image recipe (base commit, warmed single read-only cache, pinned distribution, offline probes, non-root user). Image-based tasks get a README pointing at the image. |
+| `environment/Dockerfile`, `environment/repo/` | Inline repositories and image-with-repo tasks (overlay template, no `repo/`): the generated image recipe (base commit, warmed single read-only cache, pinned distribution, offline probes, non-root user). Image-based tasks get a README pointing at the image. |
 | `solution/solve.sh`, `solution/gold.patch` | Run by Harbor's oracle agent. |
 | `tests/test.sh` | Entry point; runs `grade.py` with python3 or writes a reward 0 / `infra_error` verdict if python3 is missing. |
 | `tests/grade.py` | A verbatim copy of `src/probo/grader/grade.py`. |
 | `tests/spec.json` | What the grader needs: test tasks, results dirs, F2P, P2P, hidden paths, extra protected patterns, the Gradle timeout, toolchain versions, versions of probo and the grader. |
 | `tests/hidden/` | The hidden test files. |
+| `tests/hidden.patch` | The hidden test patch, when the task uses one. |
 | `tests/original/` | Pristine copies of every test, build and CI file, taken from the inline repository or from `--repo <checkout>`. Optional: the grader restores from git when absent. |
 
 ## The grading contract
@@ -86,6 +90,8 @@ the collect hook, `/tests/spec.json`, `/tests/hidden`, `/tests/original`.
 Every path is overridable by environment variable (`APP_DIR`, `TESTS_DIR`,
 `OUT_DIR`, `CAPTURE_DIR`, `GRADLE_BIN`, `RO_CACHE`, `TMPDIR`,
 `GRADLE_TIMEOUT_SEC`) so the same script runs on a developer machine.
+`PROBO_SKIP_HIDDEN=1` grades the base tree without the hidden tests or patch
+(validation state A).
 
 Outputs in the verifier log directory:
 

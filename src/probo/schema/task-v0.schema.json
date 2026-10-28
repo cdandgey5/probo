@@ -5,21 +5,46 @@
   "description": "One task: a repository at a pinned base commit, an instruction, hidden tests, a gold patch, the Fail-to-Pass and Pass-to-Pass test IDs, an executable verification spec, timeouts and source metadata. Lives in probo.toml next to instruction.md, gold.patch and hidden/. The converter emits Harbor's task layout from it.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "id", "kind", "language", "source", "environment", "verification"],
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "language",
+    "source",
+    "environment",
+    "verification"
+  ],
   "properties": {
-    "schema_version": { "const": "0" },
+    "schema_version": {
+      "const": "0"
+    },
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9][a-z0-9-]{2,63}$",
       "description": "Stable task ID. Lowercase letters, digits and hyphens."
     },
-    "kind": { "enum": ["bug_fix", "small_feature"] },
+    "kind": {
+      "enum": [
+        "bug_fix",
+        "small_feature"
+      ]
+    },
     "difficulty": {
-      "enum": ["trivial", "easy", "medium", "hard"],
+      "enum": [
+        "trivial",
+        "easy",
+        "medium",
+        "hard"
+      ],
       "description": "Optional label. The measured proxy is the gold patch size, computed by validate-task."
     },
     "language": {
-      "enum": ["kotlin-jvm", "android-kotlin", "android-java", "android-mixed"],
+      "enum": [
+        "kotlin-jvm",
+        "android-kotlin",
+        "android-java",
+        "android-mixed"
+      ],
       "description": "What the module under test is. kotlin-jvm is a pure JVM Gradle project (no Android plugin)."
     },
     "pack_version": {
@@ -31,85 +56,206 @@
     "source": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["repo", "license", "base_commit"],
+      "required": [
+        "repo",
+        "license",
+        "base_commit"
+      ],
       "properties": {
-        "repo": { "type": "string", "description": "Upstream repository URL, or 'fixture' for harness fixtures." },
-        "license": { "type": "string", "description": "SPDX identifier of the source repository." },
-        "base_commit": { "type": "string", "minLength": 4, "description": "Pinned base commit (full SHA for real repositories; any marker for fixtures)." },
-        "issue_url": { "type": "string" },
-        "pr_url": { "type": "string" },
-        "merge_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "Merge date of the upstream fix, for the contamination split." },
-        "attribution": { "type": "string", "description": "One paragraph task card text with attribution." }
+        "repo": {
+          "type": "string",
+          "description": "Upstream repository URL, or 'fixture' for harness fixtures."
+        },
+        "license": {
+          "type": "string",
+          "description": "SPDX identifier of the source repository."
+        },
+        "base_commit": {
+          "type": "string",
+          "minLength": 4,
+          "description": "Pinned base commit (full SHA for real repositories; any marker for fixtures)."
+        },
+        "issue_url": {
+          "type": "string"
+        },
+        "pr_url": {
+          "type": "string"
+        },
+        "merge_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Merge date of the upstream fix, for the contamination split."
+        },
+        "attribution": {
+          "type": "string",
+          "description": "One paragraph task card text with attribution."
+        }
       }
     },
     "environment": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["jdk", "gradle"],
+      "required": [],
       "properties": {
-        "docker_image": { "type": "string", "description": "Per-repo image reference, by digest, with the repository at /app at the base commit. Mutually exclusive with repo_dir." },
-        "repo_dir": { "type": "string", "description": "Task-relative directory holding the repository (fixtures). The converter generates a Dockerfile around it. Mutually exclusive with docker_image." },
-        "base_image": { "type": "string", "default": "eclipse-temurin:17-jdk", "description": "Base image for the generated Dockerfile (repo_dir tasks only)." },
-        "jdk": { "type": "string", "pattern": "^\\d+$" },
-        "gradle": { "type": "string", "pattern": "^\\d+\\.\\d+(\\.\\d+)?$" },
-        "agp": { "type": "string" },
-        "cpus": { "type": "integer", "minimum": 1, "default": 2 },
-        "memory_mb": { "type": "integer", "minimum": 1024, "default": 4096 },
-        "build_timeout_sec": { "type": "number", "exclusiveMinimum": 0, "default": 1800 },
-        "agent_user": { "type": "string", "description": "Non-root user for the agent phase ([agent].user in task.toml). Unset until verified on Docker (P0-C)." }
+        "docker_image": {
+          "type": "string",
+          "description": "Per-repo image reference, by digest, with the repository at /app at the base commit and the grading layout under /opt/gradle. Mutually exclusive with repo_dir and image_with_repo."
+        },
+        "repo_dir": {
+          "type": "string",
+          "description": "Task-relative directory holding the repository (fixtures). The converter generates a Dockerfile around it. Mutually exclusive with docker_image."
+        },
+        "base_image": {
+          "type": "string",
+          "default": "eclipse-temurin:17-jdk",
+          "description": "Base image for the generated Dockerfile (repo_dir tasks only)."
+        },
+        "jdk": {
+          "type": "string",
+          "pattern": "^\\d+$"
+        },
+        "gradle": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+        },
+        "agp": {
+          "type": "string"
+        },
+        "cpus": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2
+        },
+        "memory_mb": {
+          "type": "integer",
+          "minimum": 1024,
+          "default": 4096
+        },
+        "build_timeout_sec": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1800
+        },
+        "agent_user": {
+          "type": "string",
+          "description": "Non-root user for the agent phase ([agent].user in task.toml). Unset until verified on Docker (P0-C)."
+        },
+        "image_with_repo": {
+          "type": "string",
+          "description": "A prebuilt image that already holds the repository at image_repo_path (for example a MobileDev-Bench instance image). The converter generates an overlay Dockerfile FROM it that adds the grading layout. Mutually exclusive with docker_image and repo_dir."
+        },
+        "image_repo_path": {
+          "type": "string",
+          "default": "/app",
+          "description": "Absolute path of the repository inside image_with_repo."
+        }
       }
     },
     "verification": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["test_tasks", "f2p"],
+      "required": [
+        "test_tasks",
+        "f2p"
+      ],
       "properties": {
         "test_tasks": {
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string", "pattern": "^:([A-Za-z0-9_.-]+:)*[A-Za-z0-9_]+$" },
+          "items": {
+            "type": "string",
+            "pattern": "^:([A-Za-z0-9_.-]+:)*[A-Za-z0-9_]+$"
+          },
           "description": "Fully qualified Gradle test task paths, e.g. ':test' or ':app:testDemoDebugUnitTest'. Only these run."
         },
         "results_dirs": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Override of the JUnit XML directories derived from test_tasks."
         },
         "hidden_tests": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "default": [],
-          "description": "Repository-relative paths overwritten from the task's hidden/ directory before grading."
+          "description": "Repository-relative paths overwritten from the task's hidden/ directory before grading (whole files). See also hidden_patch."
         },
         "f2p": {
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string", "pattern": "^[^#\\s]+#[^#]+$" },
-          "description": "Fail-to-Pass test IDs as classname#name (JUnit method names without trailing parentheses)."
+          "items": {
+            "type": "string",
+            "pattern": "^[^#\\s]+#.+$"
+          },
+          "description": "Fail-to-Pass test IDs as classname#name, exactly as Gradle's JUnit XML reports them (JUnit 5 method names without the trailing parentheses). The name may contain spaces, brackets or '#', as parameterized display names do."
         },
         "p2p": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^[^#\\s]+#[^#]+$" },
+          "items": {
+            "type": "string",
+            "pattern": "^[^#\\s]+#.+$"
+          },
           "default": []
         },
-        "agent_timeout_sec": { "type": "number", "exclusiveMinimum": 0, "default": 1800 },
-        "verify_timeout_sec": { "type": "number", "exclusiveMinimum": 0, "default": 900 },
-        "gradle_timeout_sec": { "type": "number", "exclusiveMinimum": 0, "description": "Defaults to verify_timeout_sec minus 60." },
+        "agent_timeout_sec": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1800
+        },
+        "verify_timeout_sec": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 900
+        },
+        "gradle_timeout_sec": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Defaults to verify_timeout_sec minus 60."
+        },
         "extra_protected": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "default": [],
           "description": "Task-level regular expressions; matching paths count as build-file tampering."
         },
-        "test_command": { "type": "string", "description": "The command the instruction recommends to the agent." },
-        "interface_contract": { "type": "string", "description": "Public symbols the hidden tests reference, appended to the instruction." }
+        "test_command": {
+          "type": "string",
+          "description": "The command the instruction recommends to the agent."
+        },
+        "interface_contract": {
+          "type": "string",
+          "description": "Public symbols the hidden tests reference, appended to the instruction."
+        },
+        "hidden_patch": {
+          "type": "string",
+          "description": "Task-relative path of a git-format patch that touches only test source sets; the grader applies it onto the restored tree before building (SWE-bench style). Can be combined with hidden_tests."
+        },
+        "test_filters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": "Per test task, the Gradle --tests patterns to pass (class or method patterns). Keys must be entries of test_tasks."
+        }
       }
     },
     "gold": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "patch": { "type": "string", "default": "gold.patch", "description": "Task-relative path of the gold patch applied by the oracle." }
+        "patch": {
+          "type": "string",
+          "default": "gold.patch",
+          "description": "Task-relative path of the gold patch applied by the oracle."
+        }
       }
     }
   }

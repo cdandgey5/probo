@@ -306,6 +306,36 @@ def cmd_gate(args: argparse.Namespace) -> int:
 
 
 # ---------------------------------------------------------------------------
+# import-mdb
+# ---------------------------------------------------------------------------
+
+
+def cmd_import_mdb(args: argparse.Namespace) -> int:
+    from probo.importers import mobiledev_bench as mdb
+
+    rows = mdb.load_rows(args.dataset)
+    decisions = mdb.import_rows(
+        rows,
+        args.out,
+        pack_version=args.pack_version,
+        image_pattern=args.image_pattern,
+        repo_path=args.repo_path,
+        only_importable=not args.all,
+        public_pack_only=args.public_pack_only,
+        limit=args.limit,
+    )
+    print(mdb.summarize(decisions))
+    print(f"wrote {sum(1 for d in decisions if d.task_dir)} tasks and manifest.json under {args.out}")
+    if args.manifest:
+        import shutil as _shutil
+
+        Path(args.manifest).parent.mkdir(parents=True, exist_ok=True)
+        _shutil.copyfile(Path(args.out) / "manifest.json", args.manifest)
+        print(f"manifest copied to {args.manifest}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # parser
 # ---------------------------------------------------------------------------
 
@@ -380,6 +410,24 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--task", required=True, help="the emitted Harbor task directory")
     s.add_argument("--print-only", action="store_true")
     s.set_defaults(func=cmd_regrade_infra)
+
+    s = sub.add_parser("import-mdb", help="import MobileDev-Bench Android tasks from its data/test.jsonl")
+    s.add_argument("dataset", help="path to data/test.jsonl downloaded from the Hugging Face dataset")
+    s.add_argument("-o", "--out", default="build/tasks/mobiledev-bench")
+    s.add_argument("--pack-version", default="0.0.0")
+    s.add_argument(
+        "--image-pattern", default="ghcr.io/mobiledev-bench/mobiledevbench/{org}_mb_{repo}:pr-{number}"
+    )
+    s.add_argument(
+        "--repo-path",
+        default="/home/{repo}",
+        help="where the repository lives inside the instance image ({repo} and {org} are substituted)",
+    )
+    s.add_argument("--all", action="store_true", help="also write tasks that fail the v0.1 import rules")
+    s.add_argument("--public-pack-only", action="store_true", help="only Apache-2.0 and MIT sources")
+    s.add_argument("--limit", type=int)
+    s.add_argument("--manifest", help="also copy manifest.json to this path (for docs/data)")
+    s.set_defaults(func=cmd_import_mdb)
 
     for name, func, help_text in (
         ("grader-selftest", cmd_grader_selftest, "grade synthetic agent outcomes on the host JDK, no Docker"),

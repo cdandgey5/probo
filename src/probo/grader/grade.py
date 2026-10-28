@@ -381,6 +381,8 @@ class Settings:
         self.ro_cache = e.get("RO_CACHE", "/opt/gradle/ro-cache")
         self.tmp_root = e.get("TMPDIR", tempfile.gettempdir())
         self.gradle_timeout_sec = e.get("GRADLE_TIMEOUT_SEC")  # None: from spec
+        # Validation state A: grade the base tree without the hidden tests.
+        self.skip_hidden = e.get("PROBO_SKIP_HIDDEN", "") not in ("", "0", "false")
 
 
 def load_spec(tests_dir: str) -> Dict[str, object]:
@@ -514,6 +516,18 @@ def run_with_timeout(
             except subprocess.TimeoutExpired:
                 rc = -9
     return rc, timed_out
+
+
+def gradle_task_args(test_tasks: List[str], test_filters: Dict[str, List[str]]) -> List[str]:
+    """``:app:testDebugUnitTest --tests a.B --tests a.C :lib:test``: Gradle binds
+    each ``--tests`` to the task that precedes it, so filters are emitted
+    right after their task."""
+    args: List[str] = []
+    for task in test_tasks:
+        args.append(task)
+        for pattern in test_filters.get(task, []) or []:
+            args += ["--tests", str(pattern)]
+    return args
 
 
 def gradle_command(gradle_bin: str) -> List[str]:
@@ -730,14 +744,29 @@ def grade(settings: Settings, spec: Dict[str, object]) -> Verdict:
                 if rel not in verdict.restored_files:
                     verdict.restored_files.append(rel)
         hidden = os.path.join(tests_dir, "hidden")
-        if os.path.isdir(hidden):
-            verdict.hidden_files_written = copy_tree_over(hidden, app)
+        hidden_patch = os.path.join(tests_dir, str(spec.get("hidden_patch") or "hidden.patch"))
+        if settings.skip_hidden:
+            verdict.detail["hidden_skipped"] = True
+        else:
+            if os.path.isdir(hidden):
+                verdict.hidden_files_written = copy_tree_over(hidden, app)
+            if os.path.isfile(hidden_patch) and os.path.getsize(hidden_patch) > 0:
+                r = git.run("apply", "--whitespace=nowarn", hidden_patch)
+                with open(os.path.join(out, "hidden-apply.log"), "w", encoding="utf-8") as fh:
+                    fh.write(r.stdout + r.stderr)
+                if r.returncode != 0:
+                    verdict.detail["hidden_patch_failed"] = True
+                    verdict.detail["error"] = "hidden test patch did not apply onto the restored tree"
+                    verdict.exit_reason = "infra_error"
+                    return verdict
+                verdict.detail["hidden_patch_applied"] = True
         remove_build_outputs(app)
 
         # 5. Build and test, offline, with nothing of the agent's reachable.
         test_tasks = [str(t) for t in spec.get("test_tasks", [])]  # type: ignore[union-attr]
         if not test_tasks:
             raise RuntimeError("spec.json lists no test_tasks")
+        test_filters = spec.get("test_filters") or {}
         results_dirs = [str(d) for d in spec.get("results_dirs", [])] or [  # type: ignore[union-attr]
             gradle_task_to_results_dir(t) for t in test_tasks
         ]
@@ -750,6 +779,7 @@ def grade(settings: Settings, spec: Dict[str, object]) -> Verdict:
         env["GRADLE_RO_DEP_CACHE"] = settings.ro_cache
         env.pop("GRADLE_OPTS", None)
         env.pop("JAVA_TOOL_OPTIONS", None)
+        task_args = gradle_task_args(test_tasks, test_filters)  # type: ignore[arg-type]
         cmd = (
             gradle_command(settings.gradle_bin)
             + [
@@ -761,9 +791,10 @@ def grade(settings: Settings, spec: Dict[str, object]) -> Verdict:
                 "-p",
                 app,
             ]
-            + test_tasks
+            + task_args
         )
         verdict.gradle["tasks"] = test_tasks
+        verdict.gradle["task_args"] = task_args
         log_path = os.path.join(out, "gradle-test.log")
         g0 = time.time()
         rc, timed_out = run_with_timeout(cmd, app, env, log_path, timeout)
