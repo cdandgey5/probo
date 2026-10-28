@@ -124,6 +124,17 @@ def median(values: Sequence[float]) -> float | None:
     return statistics.median(vals) if vals else None
 
 
+def tasks_needed(sd_diff: float, effect: float, alpha_z: float = Z_95, power_z: float = Z_POWER_80) -> int:
+    """Tasks needed for a paired comparison to detect ``effect`` (in pass-rate
+    units, 0 to 1) at the given significance and power, from the standard
+    deviation of per-task differences: ``n = ((z_a + z_b) * sd / effect)^2``."""
+    if effect <= 0:
+        raise ValueError("effect must be positive")
+    if sd_diff <= 0:
+        return 1
+    return int(math.ceil(((alpha_z + power_z) * sd_diff / effect) ** 2))
+
+
 def cost_per_resolved(costs: Sequence[float | None], resolved: Sequence[bool]) -> tuple[float | None, int]:
     """Total reported cost divided by the number of resolved runs, and how many
     runs had no cost reported (those are excluded from the numerator and the

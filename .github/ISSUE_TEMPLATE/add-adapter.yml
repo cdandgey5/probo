@@ -1,0 +1,24 @@
+name: Add an agent or grader
+description: Propose an agent adapter or a mobile-specific grader
+title: "adapter: <name>"
+labels: [adapter]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it
+      options: [Agent adapter (Harbor custom agent), Grader (new signal or exit reason)]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: For an agent, how it is invoked and what it reports (version, tokens, cost). For a grader, the exit reason or detail it adds and the fixture scenario that proves it.
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Conditions that cannot be equalised
+      description: Built-in tools, permission flags, web access, prompt template. These go in the conditions table.

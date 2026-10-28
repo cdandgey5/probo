@@ -5,6 +5,26 @@ project is pre-release, so every entry sits under Unreleased until v0.1.0.
 
 ## Unreleased
 
+### Added (2026-10-28, Phase 5 code and release machinery)
+
+- `probo experiment`: the same tasks under two configurations (agent, model
+  or adapter kwargs), two `harbor run` jobs, a paired comparison with the
+  minimum detectable difference, and a power table computed from the
+  measured variance (`stats.tasks_needed`). `probo compare` now prints the
+  tasks needed for 5, 10, 15 and 20 point differences.
+- Grader signals from the diff, reported in `verdict.json` and the result
+  manifest, never as an exit reason: secret-looking strings (cloud keys,
+  private key blocks, tokens, quoted secret assignments) and permissions
+  added to an AndroidManifest.
+- A reusable GitHub Action (`action.yml`): validates task directories and,
+  given two JSONL result sets, writes the paired comparison to the job
+  summary. It never gates on a pass rate. `action-smoke.yml` exercises it
+  on the fixture task and the synthetic `examples/` result sets.
+- `release.yml`: tag-driven build, PyPI trusted publishing and a GitHub
+  release; docs/RELEASING.md. Issue templates (propose a task, add an
+  adapter, bug) and a pull request template with the DCO checklist.
+- 124 tests pass.
+
 ### Added (2026-10-28, package P2-A, code half)
 
 - Reference agents as Harbor custom agents: `probo.agents.saboteur:Saboteur`
@@ -13,7 +33,7 @@ project is pre-release, so every entry sits under Unreleased until v0.1.0.
   `probo.agents.command:CommandAgent` (runs any command-line tool inside the
   task container from a template, for evaluating a team's own agent as a
   black box). Options are validated by Harbor's `options_model`; the
-  agents import without Harbor for tests.  tests pass.
+  agents import without Harbor for tests.
 
 ### Added (2026-10-28, package P3-A)
 

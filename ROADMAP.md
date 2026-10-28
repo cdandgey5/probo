@@ -107,10 +107,10 @@ Each step names the Harbor mechanism that implements it, as verified against Har
 | Task authoring guide and a CI job that runs validate-task and a Harbor dry run on task pull requests | x | | |
 | Podman backend check through Harbor's podman environment | x | | |
 | Telemetry opt-out and the key limitation documented in the README | x | | |
-| Experiment mode: same tasks, two configs (with and without a skill or MCP server), paired CI, with a stated minimum detectable difference for the task count used | | x | |
+| Experiment mode: same tasks, two configs (with and without a skill or MCP server), paired CI, with a stated minimum detectable difference for the task count used (**built 2026-10-28**: `probo experiment`, power table from measured variance; untested against real runs) | | x | |
 | Local Maven mirror or cache proxy in the image so agent-added dependencies resolve during offline grading | | x | |
-| Graders: Android Lint and detekt delta; secrets scan; manifest permission diff; debug APK size delta | | x | |
-| GitHub Action: runs the harness self-tests and an opt-in paired comparison that reports an interval; never a hard pass-rate gate | | x | |
+| Graders: Android Lint and detekt delta; secrets scan; manifest permission diff; debug APK size delta (**secrets scan and manifest permission diff built 2026-10-28** as diff signals; lint, detekt and APK need builds) | | x | |
+| GitHub Action: runs the harness self-tests and an opt-in paired comparison that reports an interval; never a hard pass-rate gate (**built 2026-10-28**: `action.yml`, validates tasks and compares result sets into the job summary) | | x | |
 | Flutter and React Native base images and task packs | | | x |
 | Emulator graders via Maestro flows; screenshot diff (Linux hosts with KVM only) | | | x |
 | iOS on macOS runners | | | x |
@@ -284,9 +284,9 @@ The phases above describe what to build. This section turns them into work a fre
 | P3-B | P3-A | Mining sprints: screen candidates, gate, task cards; repeat | 15 fresh tasks pass the gate, or the candidate pool is exhausted and the count is recorded | Open |
 | P3-C | G2 yes | MobileDev-Bench import adapter; its Android-native subset through the gate | Imported tasks pass the gate; failures logged in the pack changelog | **Adapter done** (`probo import-mdb`: 230 of 328 Android rows pass the v0.1 rules, 77 from Apache-2.0 or MIT sources, all 230 validate). The gate on the imported tasks needs H2; images are 3.8 to 4.8 GiB compressed each, so plan disk per repository (docs/mobiledev-bench-images.md) |
 | P4-A | P3, H5 | Full benchmark run on the chosen hardware | Raw JSONL for every run; conditions table complete | Open |
-| P4-B | P4-A | README with table, MDD, GIF; write-up; v0.1.0 on PyPI; CONTRIBUTING; issue templates | Release tagged; install and single-task run work from a clean machine | CONTRIBUTING.md and a status README exist; the rest is open |
+| P4-B | P4-A | README with table, MDD, GIF; write-up; v0.1.0 on PyPI; CONTRIBUTING; issue templates | Release tagged; install and single-task run work from a clean machine | CONTRIBUTING.md, issue and PR templates, the release workflow (PyPI trusted publishing, docs/RELEASING.md) and a status README exist. Open: the numbers, the GIF, the write-up, the tag |
 
-Expect 15 to 25 sessions for the fourteen packages. P0-B, P3-C's adapter and P3-A's draft command are done; experiment mode and the diff-based graders (Phase 5) can still be built without Docker; everything else from P0-C onward waits on H2.
+Expect 15 to 25 sessions for the fourteen packages. P0-B, P3-C's adapter and P3-A's draft command are done; experiment mode, the diff signals, the Action and the release machinery are built; everything else from P0-C onward waits on H2.
 
 ### Rules for every session (go into CLAUDE.md)
 

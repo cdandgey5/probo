@@ -354,6 +354,40 @@ def cmd_new_task(args: argparse.Namespace) -> int:
 
 
 # ---------------------------------------------------------------------------
+# experiment
+# ---------------------------------------------------------------------------
+
+
+def cmd_experiment(args: argparse.Namespace) -> int:
+    from probo.experiment import Arm, run_experiment
+
+    tasks = [Path(t).resolve() for t in args.task]
+    for t in tasks:
+        if (t / "probo.toml").is_file():
+            _eprint(f"{t} is a task source; convert it first (probo convert) and pass the emitted directory")
+            return 1
+    arm_a = Arm(args.label_a, args.agent_a, args.model_a, args.ak_a or [])
+    arm_b = Arm(args.label_b, args.agent_b or args.agent_a, args.model_b or args.model_a, args.ak_b or [])
+    if not args.print_only and not shutil.which("harbor"):
+        _eprint("harbor is not on PATH. Install it with: uv tool install harbor==" + HARBOR_PIN)
+        return 2
+    result = run_experiment(
+        tasks,
+        arm_a,
+        arm_b,
+        attempts=args.attempts,
+        concurrency=args.concurrency,
+        jobs=Path(args.jobs),
+        name=args.name,
+        print_only=args.print_only,
+    )
+    print(result.report)
+    if result.report_path:
+        print(f"report written to {result.report_path}")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # parser
 # ---------------------------------------------------------------------------
 
@@ -453,6 +487,28 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--pack-version", default="0.0.0")
     s.add_argument("--force", action="store_true", help="overwrite an existing draft")
     s.set_defaults(func=cmd_new_task)
+
+    s = sub.add_parser(
+        "experiment",
+        help="run the same tasks under two configurations and compare them with a paired interval",
+    )
+    s.add_argument(
+        "-p", "--task", action="append", required=True, help="emitted Harbor task directory (repeatable)"
+    )
+    s.add_argument("--agent-a", required=True)
+    s.add_argument("--agent-b", help="defaults to agent-a (same agent, different options)")
+    s.add_argument("--model-a")
+    s.add_argument("--model-b")
+    s.add_argument("--ak-a", action="append", help="agent kwarg key=value for arm A (repeatable)")
+    s.add_argument("--ak-b", action="append", help="agent kwarg key=value for arm B (repeatable)")
+    s.add_argument("--label-a", default="baseline")
+    s.add_argument("--label-b", default="treatment")
+    s.add_argument("-k", "--attempts", type=int, default=3)
+    s.add_argument("-n", "--concurrency", type=int, default=1)
+    s.add_argument("-o", "--jobs", default=os.environ.get("PROBO_JOBS", "harbor-jobs"))
+    s.add_argument("--name")
+    s.add_argument("--print-only", action="store_true", help="print the two harbor commands and exit")
+    s.set_defaults(func=cmd_experiment)
 
     for name, func, help_text in (
         ("grader-selftest", cmd_grader_selftest, "grade synthetic agent outcomes on the host JDK, no Docker"),

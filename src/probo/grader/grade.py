@@ -518,6 +518,45 @@ def run_with_timeout(
     return rc, timed_out
 
 
+_SECRET_PATTERNS = (
+    ("aws_access_key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
+    ("google_api_key", re.compile(r"\bAIza[0-9A-Za-z_\-]{35}\b")),
+    ("private_key_block", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH |DSA |PGP )?PRIVATE KEY")),
+    ("github_token", re.compile(r"\bgh[pousr]_[A-Za-z0-9]{36,}\b")),
+    ("slack_token", re.compile(r"\bxox[baprs]-[0-9A-Za-z\-]{10,}\b")),
+    (
+        "secret_assignment",
+        re.compile(r"(?i)\b(?:api[_-]?key|secret|password|passwd|token)\b\s*[:=]\s*[\"\'][^\"\']{8,}[\"\']"),
+    ),
+)
+_PERMISSION_RE = re.compile(r"<uses-permission(?:-sdk-23)?\b[^>]*android:name\s*=\s*\"([^\"]+)\"")
+
+
+def scan_diff_signals(diff_text: str) -> Dict[str, List[Dict[str, str]]]:
+    """Secondary signals from the added lines of a diff: secret-looking
+    strings and Android permissions added to a manifest. Never an exit
+    reason; reported in verdict.json and the result manifest."""
+    secrets: List[Dict[str, str]] = []
+    permissions: List[Dict[str, str]] = []
+    current: Optional[str] = None
+    for line in diff_text.splitlines():
+        m = _DIFF_FILE_RE.match(line)
+        if m:
+            current = None if m.group(1).strip() == _DIFF_DEV_NULL else m.group(1).strip()
+            continue
+        if not current or not line.startswith("+") or line.startswith("+++"):
+            continue
+        added = line[1:]
+        for kind, pattern in _SECRET_PATTERNS:
+            if pattern.search(added):
+                secrets.append({"path": current, "kind": kind})
+                break
+        if current.endswith("AndroidManifest.xml"):
+            for pm in _PERMISSION_RE.finditer(added):
+                permissions.append({"path": current, "permission": pm.group(1)})
+    return {"secrets_found": secrets, "permissions_added": permissions}
+
+
 def gradle_task_args(test_tasks: List[str], test_filters: Dict[str, List[str]]) -> List[str]:
     """``:app:testDebugUnitTest --tests a.B --tests a.C :lib:test``: Gradle binds
     each ``--tests`` to the task that precedes it, so filters are emitted
@@ -559,6 +598,8 @@ class Verdict:
             "unresolved_dependency": False,
             "suspicious_f2p_pass_without_diff": False,
             "history_rewrite_suspected": False,
+            "secrets_found": [],
+            "permissions_added": [],
             "error": None,
         }
         self.gradle: Dict[str, object] = {
@@ -713,6 +754,7 @@ def grade(settings: Settings, spec: Dict[str, object]) -> Verdict:
         dep_files = find_dependency_additions(diff_text)
         verdict.detail["dependency_added"] = bool(dep_files)
         verdict.detail["dependency_added_files"] = dep_files
+        verdict.detail.update(scan_diff_signals(diff_text))
 
         # In a shared container the agent may also have rewritten history, so
         # compare the live protected files with the pristine copies when the

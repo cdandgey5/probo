@@ -1,0 +1,78 @@
+name: Probo
+description: >-
+  Validate Probo tasks and, optionally, compare two result sets with a paired
+  interval and a stated minimum detectable difference. Never a hard pass-rate
+  gate: the comparison is written to the job summary, the step fails only when
+  a task is invalid.
+author: cdandgey5
+
+inputs:
+  tasks:
+    description: Task directories to validate (space-separated globs), for example "tasks/**/".
+    required: false
+    default: ""
+  results-a:
+    description: JSONL result set A (from `probo flatten`), the baseline.
+    required: false
+    default: ""
+  results-b:
+    description: JSONL result set B, the configuration under test.
+    required: false
+    default: ""
+  label-a:
+    description: Label for result set A in the report.
+    required: false
+    default: baseline
+  label-b:
+    description: Label for result set B in the report.
+    required: false
+    default: treatment
+  probo-ref:
+    description: Git ref of Probo to install (tag, branch or commit).
+    required: false
+    default: main
+  python-version:
+    description: Python version for uv.
+    required: false
+    default: "3.12"
+
+outputs:
+  compare-report:
+    description: Path of the Markdown comparison report, when results were given.
+    value: ${{ steps.compare.outputs.report }}
+
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: install probo
+      shell: bash
+      run: |
+        if [ -f "${GITHUB_ACTION_PATH}/pyproject.toml" ]; then
+          uv tool install --force "${GITHUB_ACTION_PATH}"
+        else
+          uv tool install --force "probo @ git+https://github.com/cdandgey5/probo@${{ inputs.probo-ref }}"
+        fi
+        probo --version
+    - name: validate tasks
+      if: inputs.tasks != ''
+      shell: bash
+      run: |
+        shopt -s globstar nullglob
+        set -- ${{ inputs.tasks }}
+        dirs=""
+        for d in "$@"; do [ -f "$d/probo.toml" ] && dirs="$dirs $d"; done
+        if [ -z "$dirs" ]; then echo "no task directories matched ${{ inputs.tasks }}"; exit 1; fi
+        probo validate-task $dirs | tee -a "$GITHUB_STEP_SUMMARY"
+    - name: compare result sets
+      id: compare
+      if: inputs.results-a != '' && inputs.results-b != ''
+      shell: bash
+      run: |
+        cp "${{ inputs.results-a }}" "/tmp/${{ inputs.label-a }}.jsonl"
+        cp "${{ inputs.results-b }}" "/tmp/${{ inputs.label-b }}.jsonl"
+        probo compare "/tmp/${{ inputs.label-a }}.jsonl" "/tmp/${{ inputs.label-b }}.jsonl" -o probo-compare.md
+        cat probo-compare.md >> "$GITHUB_STEP_SUMMARY"
+        echo "report=probo-compare.md" >> "$GITHUB_OUTPUT"

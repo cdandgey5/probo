@@ -206,6 +206,10 @@ def render_compare(a: Records, b: Records, label_a: str, label_b: str) -> str:
         lines.append("**Verdict: a detectable difference** (the interval excludes zero).")
     else:
         lines.append("**Verdict: no detectable difference** (the interval includes zero).")
+    if d.n_tasks >= 2 and d.se == d.se and d.se > 0:
+        sd = d.se * (d.n_tasks**0.5)
+        need = ", ".join(f"{int(100 * e)} pts: {stats.tasks_needed(sd, e)}" for e in (0.05, 0.10, 0.15, 0.20))
+        lines += ["", f"Tasks needed at 80% power for a difference of {need} (from the measured variance)."]
     if only_a or only_b:
         lines += ["", f"Tasks only in A: {only_a or 'none'}. Tasks only in B: {only_b or 'none'}."]
     lines += ["", "| Task | A | B | A - B |", "|---|---|---|---|"]

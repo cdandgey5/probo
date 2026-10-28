@@ -1,0 +1,53 @@
+name: release
+
+# Tag v<version> on main to publish: builds the sdist and wheel with uv,
+# publishes to PyPI through trusted publishing (configure the publisher on
+# pypi.org for this repository and the "release" environment first; no API
+# token is stored), and attaches the artifacts to a GitHub release.
+# See docs/RELEASING.md.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --all-groups
+      - run: uv run ruff check src tests
+      - run: uv run pytest
+      - run: uv build
+      - name: tag matches the package version
+        run: |
+          v="$(uv run python -c 'import probo; print(probo.__version__)')"
+          [ "v$v" = "${GITHUB_REF_NAME}" ] || { echo "tag ${GITHUB_REF_NAME} but package version $v"; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

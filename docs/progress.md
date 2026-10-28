@@ -3,6 +3,24 @@
 One entry per roadmap package, with the package's done check and its output,
 dated. Newest first. The package table in ROADMAP.md carries the summary.
 
+## 2026-10-28 (later): Phase 5 code, P4-B machinery
+
+What exists now without Docker: experiment mode (`probo experiment`, two
+arms over the same tasks, paired interval, MDD, power table from the measured
+variance), diff-based secret and manifest-permission signals in the grader,
+the reusable GitHub Action with a smoke workflow, the tag-driven release
+workflow (not yet used: v0.1.0 waits for Phase 4 numbers), issue and pull
+request templates, docs/RELEASING.md, synthetic example result sets.
+
+Checked: `probo experiment --print-only` prints both harbor commands;
+`probo compare` on the examples prints the interval, the verdict and the
+tasks-needed line; 124 tests pass. Not checked: the Action on GitHub
+(the smoke workflow runs on this push) and any real experiment (needs H2).
+
+Still Docker-, host- or budget-gated in Phase 5: the dependency mirror in the
+image, Android Lint and detekt deltas, APK size delta, Flutter and React
+Native images, emulator graders (Linux with KVM), iOS (macOS).
+
 ## 2026-10-28 (later): P2-A, the code half (reference agents)
 
 Done check: one agent, one task, three attempts; saboteur flagged every
@@ -21,7 +39,7 @@ Harbor runs need Docker (H2) and, for a commercial agent, a key (H3).
   estimate path (needs a real run to see Aider's output), the conditions
   table filled from real trials.
 
-Unit tests:  passed.
+Unit tests: 119 passed.
 
 ## 2026-10-28 (later): P3-A, new-task from a pull request
 

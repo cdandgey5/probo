@@ -117,6 +117,41 @@ Two agents ship with Probo and run through Harbor's `module:Class` syntax:
   `--ak command='my-agent --repo {app_dir} --task-file {instruction_file}'`,
   so a team can evaluate its own agent as a black box.
 
+## Experiment mode
+
+Same tasks, two configurations, one honest answer:
+
+```bash
+uv run probo experiment -p build/harbor-tasks/<task> -p build/harbor-tasks/<task2> \
+  --agent-a claude-code --model-a anthropic/claude-sonnet-5-5 \
+  --ak-b skills=/opt/my-skills --label-a baseline --label-b with-skill -k 3
+```
+
+Both arms run through Harbor with identical tasks, attempts, timeouts and
+network; the report gives the paired per-task difference with its interval,
+the minimum detectable difference, and a power table computed from the
+variance this experiment measured, so "no detectable difference" comes with
+the number of tasks it would have taken. Try the renderer without Docker on
+the synthetic sets in `examples/`:
+
+```bash
+uv run probo compare examples/results-baseline.jsonl examples/results-with-skill.jsonl
+```
+
+## In your CI
+
+The repository doubles as a GitHub Action. It validates task directories and,
+given two result sets, writes the paired comparison to the job summary. It
+never fails a build on a pass rate.
+
+```yaml
+- uses: cdandgey5/probo@main
+  with:
+    tasks: "tasks/**/"
+    results-a: results/baseline.jsonl
+    results-b: results/with-skill.jsonl
+```
+
 ## Statistics
 
 The headline is pass@1 averaged over attempts, with a 95% interval from

@@ -1,0 +1,40 @@
+name: Propose a task
+description: A merged pull request that could become a Probo task
+title: "task: <owner>/<repo>#<number>"
+labels: [task-proposal]
+body:
+  - type: input
+    id: pr
+    attributes:
+      label: Pull request URL
+      placeholder: https://github.com/<owner>/<repo>/pull/<number>
+    validations:
+      required: true
+  - type: input
+    id: issue
+    attributes:
+      label: Linked issue URL
+      description: The instruction comes from the issue, never from the pull request.
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: Source repository license
+      options: [Apache-2.0, MIT, other (not eligible for the public pack)]
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules (see docs/TASK_AUTHORING.md)
+      options:
+        - label: The fix changes main sources only (no build scripts, properties, catalogs, wrapper, CI)
+        - label: The fix adds no dependency
+        - label: The pull request adds or changes JVM unit tests (not only androidTest)
+        - label: I ran `probo new-task` and attached or summarised NOTES.md
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything the draft could not decide (variant, interface contract, flaky tests).

@@ -1,0 +1,28 @@
+name: action-smoke
+
+# Exercises the reusable action in this repository against the fixture task
+# and the synthetic example result sets, and writes the comparison to the
+# job summary. It never gates on a pass rate.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        id: probo
+        with:
+          tasks: "tasks/fixtures/*/"
+          results-a: examples/results-baseline.jsonl
+          results-b: examples/results-with-skill.jsonl
+          label-a: baseline
+          label-b: with-skill
+      - run: test -f "${{ steps.probo.outputs.compare-report }}"

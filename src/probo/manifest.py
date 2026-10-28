@@ -181,6 +181,8 @@ def flatten_trial(trial_dir: Path, host: dict[str, Any] | None = None) -> dict[s
         "tampered_files": verdict.get("tampered_files") or [],
         "dependency_added": bool(detail.get("dependency_added")),
         "oom": bool(detail.get("oom")),
+        "secrets_found": detail.get("secrets_found") or [],
+        "permissions_added": detail.get("permissions_added") or [],
         "f2p_results": tests.get("f2p"),
         "p2p_results": tests.get("p2p"),
         "n_junit_reports": tests.get("n_reports"),
