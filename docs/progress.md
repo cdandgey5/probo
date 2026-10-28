@@ -3,6 +3,26 @@
 One entry per roadmap package, with the package's done check and its output,
 dated. Newest first. The package table in ROADMAP.md carries the summary.
 
+## 2026-10-28 (later): P2-A, the code half (reference agents)
+
+Done check: one agent, one task, three attempts; saboteur flagged every
+time. The agents exist and are unit-tested against a fake environment; the
+Harbor runs need Docker (H2) and, for a commercial agent, a key (H3).
+
+- `probo.agents.saboteur:Saboteur`: five cheating modes, each touching only
+  protected files, so the grader must flag every run as `tampered`. The
+  self-test scenarios `tamper_tests`, `init_script`, `replace_gradlew` and
+  `properties_edit` already prove the grader side on the host JDK.
+- `probo.agents.command:CommandAgent`: the generic command template from
+  the agent-integration ADR; writes the instruction into the container and
+  runs the configured command with `{instruction_file}`, `{instruction}`
+  and `{app_dir}` expanded.
+- Still open in P2-A: adapter version pinning presets, the Aider cost
+  estimate path (needs a real run to see Aider's output), the conditions
+  table filled from real trials.
+
+Unit tests:  passed.
+
 ## 2026-10-28 (later): P3-A, new-task from a pull request
 
 Done check: a real PR becomes a task that passes the gate. The draft half is
@@ -22,7 +42,7 @@ Live run against `https://github.com/commons-app/apps-android-commons/pull/6529`
   the image placeholder;
 - `probo validate-task`: ok, one warning (image not pinned by digest).
 
-Unit tests:  (canned pull request, Kotlin and Java declaration
+Unit tests: 119 passed (canned pull request, Kotlin and Java declaration
 extraction, rejection of build-file changes and missing issues).
 
 ## 2026-10-28 (later): P3-C, MobileDev-Bench import adapter

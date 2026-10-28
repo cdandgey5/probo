@@ -5,6 +5,16 @@ project is pre-release, so every entry sits under Unreleased until v0.1.0.
 
 ## Unreleased
 
+### Added (2026-10-28, package P2-A, code half)
+
+- Reference agents as Harbor custom agents: `probo.agents.saboteur:Saboteur`
+  (modes `edit_tests`, `delete_tests`, `disable_tests`, `init_script`,
+  `wrapper`; every run must grade `tampered`) and
+  `probo.agents.command:CommandAgent` (runs any command-line tool inside the
+  task container from a template, for evaluating a team's own agent as a
+  black box). Options are validated by Harbor's `options_model`; the
+  agents import without Harbor for tests.  tests pass.
+
 ### Added (2026-10-28, package P3-A)
 
 - `probo new-task <pull request URL>`: drafts a task from a merged GitHub

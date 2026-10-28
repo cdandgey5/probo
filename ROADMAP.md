@@ -278,7 +278,7 @@ The phases above describe what to build. This section turns them into work a fre
 | P1-B | P1-A | Converter to Harbor layout; grader generalized from the prototype; fixtures with all v0.1 branches; CI matrix | Every fixture branch returns its expected exit reason; every emitted task passes a Harbor dry run | **Done for the JVM fixture** without Docker: converter, grader, fourteen scenarios as `probo grader-selftest`, CI job on the host JDK. Open: the Android fixture module and the Harbor dry run in CI (needs P1-A) |
 | P1-C | P1-B, H6 | First per-repo image for seed app one; one hand-authored task | Oracle ten of ten, no-op ten of ten, state B ten of ten through Harbor; G3 recorded | Blocked on H2 and H6; `probo gate` implements the state A/B/C runs |
 | P1-D | P1-C | Manifest flattening; thin CLI for run, report, validate-task, regrade-infra | A Harbor job produces the JSONL manifest and a rendered report | **Done against a saved sample trial layout** validated by Harbor's TrialResult model. Open: the same against a real Harbor job (needs P0-C) |
-| P2-A | P1-D, keys | Adapter configuration and pinning; saboteur agent; cost capture including the Aider estimate; conditions table | One agent, one task, three attempts; saboteur flagged every time | Blocked on H2 and H3; the conditions table renderer exists |
+| P2-A | P1-D, keys | Adapter configuration and pinning; saboteur agent; cost capture including the Aider estimate; conditions table | One agent, one task, three attempts; saboteur flagged every time | **Code half done**: saboteur (five modes) and command-template agents as Harbor custom agents, unit-tested; the conditions table renderer exists. The Harbor runs and the Aider estimate need H2 and H3 |
 | P2-B | P2-A, H5 | Pilot: one agent, five tasks, one attempt; statistics module with clustered SE and minimum detectable difference; compare command | Pilot report with cost per run and MDD; G4 recorded | Statistics module and `probo compare` **done** with a hand-computed fixture; the pilot is blocked on H2, H3, H5 |
 | P3-A | P1-D | new-task from a PR URL with interface-contract extraction; docs/TASK_AUTHORING.md | A real PR becomes a task that passes the gate | **Draft half done**: `probo new-task` verified live on a commons-app pull request; docs/TASK_AUTHORING.md written. The gate half needs the per-repo image (H2) |
 | P3-B | P3-A | Mining sprints: screen candidates, gate, task cards; repeat | 15 fresh tasks pass the gate, or the candidate pool is exhausted and the count is recorded | Open |
@@ -286,7 +286,7 @@ The phases above describe what to build. This section turns them into work a fre
 | P4-A | P3, H5 | Full benchmark run on the chosen hardware | Raw JSONL for every run; conditions table complete | Open |
 | P4-B | P4-A | README with table, MDD, GIF; write-up; v0.1.0 on PyPI; CONTRIBUTING; issue templates | Release tagged; install and single-task run work from a clean machine | CONTRIBUTING.md and a status README exist; the rest is open |
 
-Expect 15 to 25 sessions for the fourteen packages. P0-B, P3-C's adapter and P3-A's draft command are done; the reference agents (P2-A code) and experiment mode (Phase 5) can still be built without Docker; everything else from P0-C onward waits on H2.
+Expect 15 to 25 sessions for the fourteen packages. P0-B, P3-C's adapter and P3-A's draft command are done; experiment mode and the diff-based graders (Phase 5) can still be built without Docker; everything else from P0-C onward waits on H2.
 
 ### Rules for every session (go into CLAUDE.md)
 

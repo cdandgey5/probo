@@ -104,6 +104,19 @@ uv run probo grader-selftest build/harbor-tasks/pricing-discount --gradle-dist /
 uv run probo gate build/harbor-tasks/pricing-discount --gradle-dist /tmp/gradle-dist/gradle-8.14.3 --warm-home /tmp/gradle-home --runs 10
 ```
 
+## Reference agents
+
+Two agents ship with Probo and run through Harbor's `module:Class` syntax:
+
+- `probo.agents.saboteur:Saboteur` never fixes anything. It edits or deletes
+  the tests, disables the test task from a build script, writes an init
+  script, or replaces the wrapper (`--ak mode=...`). Every run must grade
+  `tampered`; that is the harness's own regression test.
+- `probo.agents.command:CommandAgent` runs any command-line tool already in
+  the task image from a template, for example
+  `--ak command='my-agent --repo {app_dir} --task-file {instruction_file}'`,
+  so a team can evaluate its own agent as a black box.
+
 ## Statistics
 
 The headline is pass@1 averaged over attempts, with a 95% interval from
